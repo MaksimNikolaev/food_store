@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 103.12px;
+  padding: 57px 96px 25px;
+  position: relative;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  top: 135px;
+  width: 100%;
+  border-bottom: 1px solid #cbcbcb;
+}
