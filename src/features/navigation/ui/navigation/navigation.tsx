@@ -1,15 +1,7 @@
 import { FC } from 'react';
 import { LinkNav } from '../../../../shared/ui/link-nav/link-nav';
 import styles from './navigation.module.css';
-
-type TNavigation = {
-  menu: {
-    id: number;
-    title: string;
-    path: string;
-  }[],
-  place: 'header' | 'footer'
-};
+import { TNavigation } from './types';
 
 export const Navigation: FC<TNavigation> = ({ menu, place }) => {
   return (

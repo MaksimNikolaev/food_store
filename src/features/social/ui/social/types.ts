@@ -1,4 +1,4 @@
-import { IconName } from '../../../../shared/ui/icon/icon';
+import { IconName } from "../../../../shared/ui/icon/types";
 
 export type TSocialList = {
   id: number;

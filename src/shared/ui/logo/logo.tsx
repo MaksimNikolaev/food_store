@@ -1,11 +1,7 @@
 import { FC } from 'react';
 import { Icon } from '../icon/icon';
 import styles from './logo.module.css';
-
-type TLogo = {
-  name: string;
-  size: 'xs' | 'sm';
-};
+import { TLogo } from './types';
 
 export const Logo: FC<Partial<TLogo>> = ({ name = 'eatly', size = 'xs' }) => {
   const sizes = {

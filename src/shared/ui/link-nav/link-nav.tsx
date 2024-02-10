@@ -1,11 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import styles from './link-nav.module.css';
 import { FC } from 'react';
-
-type TLinkNav = {
-  item: string;
-  path: string;
-};
+import { TLinkNav } from './types';
 
 export const LinkNav: FC<TLinkNav> = ({ item, path }) => {
   return (

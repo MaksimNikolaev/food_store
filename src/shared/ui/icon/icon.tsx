@@ -1,14 +1,7 @@
-import { FC, SVGProps, useState } from 'react';
+import { FC, useState } from 'react';
 import IconsSVG from '../../assets/icons/icons.svg';
 import style from './icon.module.css';
-
-export type IconName = 'logo' | 'inst' | 'linkedin' | 'facebook' | 'twitter';
-
-type TIcon = {
-  name: IconName;
-  handleClick?: (e: React.SyntheticEvent) => void;
-  colorHover?: string;
-} & SVGProps<SVGSVGElement>;
+import { TIcon } from './types';
 
 /**
  * Компонент Icons отображает SVG-иконку с возможными эффектами при наведении и обработкой кликов.
