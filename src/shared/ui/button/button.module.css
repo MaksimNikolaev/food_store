@@ -1,0 +1,20 @@
+.btn {
+  border-radius: 12px;
+  padding: 18px 26px 17px 26px;
+  border: 1.5px solid var(--blue-color);;
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 16.27px;
+  max-height: 59px;
+  cursor: pointer;
+}
+
+.primary {
+  background-color: var(--blue-color);
+  color: var(--white-color);  
+}
+
+.secondary {
+  background-color: var(--white-color);
+  color: var(--blue-color);  
+}
