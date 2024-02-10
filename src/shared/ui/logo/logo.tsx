@@ -1,16 +1,38 @@
 import { FC } from 'react';
-import Icons from '../icon/icons';
+import { Icon } from '../icon/icon';
 import styles from './logo.module.css';
 
 type TLogo = {
-  name?: string;
+  name: string;
+  size: 'xs' | 'sm';
 };
 
-export const Logo: FC<TLogo> = ({ name = 'eatly' }) => {
+export const Logo: FC<Partial<TLogo>> = ({ name = 'eatly', size = 'xs' }) => {
+  const sizes = {
+    xs: {
+      widthLogo: 45.94,
+      heightLogo: 42.31,
+      fontSize: '21px',
+      gap: '11px',
+    },
+    sm: {
+      widthLogo: 61.88,
+      heightLogo: 57,
+      fontSize: '28px',
+      gap: '18.82px',
+    },
+  };
+
   return (
-    <div className={styles.logo}>
-      <Icons width={45.94} height={42.31} name={'logo'} />
-      <span className={styles.title}>{name}</span>
+    <div style={{ gap: sizes[size].gap }} className={styles.logo}>
+      <Icon
+        width={sizes[size].widthLogo}
+        height={sizes[size].heightLogo}
+        name={'logo'}
+      />
+      <span style={{ fontSize: sizes[size].fontSize }} className={styles.title}>
+        {name}
+      </span>
     </div>
   );
 };

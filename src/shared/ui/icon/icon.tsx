@@ -1,10 +1,10 @@
 import { FC, SVGProps, useState } from 'react';
 import IconsSVG from '../../assets/icons/icons.svg';
-import style from './icons.module.css';
+import style from './icon.module.css';
 
-type IconName = 'logo';
+export type IconName = 'logo' | 'inst' | 'linkedin' | 'facebook' | 'twitter';
 
-type TIcons = {
+type TIcon = {
   name: IconName;
   handleClick?: (e: React.SyntheticEvent) => void;
   colorHover?: string;
@@ -23,15 +23,16 @@ type TIcons = {
  * @param {...SVGProps<SVGSVGElement>} props - Дополнительные свойства SVG, передаваемые в элемент SVG.
  * @returns {JSX.Element} - Возвращает элемент JSX, представляющий иконку.
  */
-const Icons: FC<TIcons> = ({
+export const Icon: FC<TIcon> = ({
   name,
+  color = 'var(--black-color)',
   colorHover,
   handleClick,
   className,
   ...props
 }) => {
   const [isHoverIcon, setHoverIcon] = useState(false);
-  const colorHoverIcon = isHoverIcon ? colorHover : 'transparent';
+  const colorHoverIcon = isHoverIcon ? colorHover : color;
 
   return (
     <svg
@@ -39,9 +40,9 @@ const Icons: FC<TIcons> = ({
         color: colorHoverIcon,
         fill: colorHoverIcon,
         stroke: colorHoverIcon,
-        transition: 'all 0.3s linear',
+        transition: 'all 0.2s linear',
       }}
-      className={`${handleClick ? style.icon : ''} ${className}`}
+      className={`${handleClick ? style.icon : ''} ${className ?? ''}`}
       onClick={handleClick}
       {...props}
       onMouseOver={() => setHoverIcon(true)}
@@ -51,5 +52,3 @@ const Icons: FC<TIcons> = ({
     </svg>
   );
 };
-
-export default Icons;

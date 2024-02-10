@@ -5,6 +5,10 @@
   color: #606060;
 }
 
+.link:hover {
+  color: var(--blue-color);
+}
+
 .active {
   color: var(--blue-color)
 }

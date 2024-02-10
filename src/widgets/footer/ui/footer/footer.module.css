@@ -1,0 +1,27 @@
+.footer {  
+  padding: 96px 90px 81px 103px;
+  background-color: #eaeaea;
+}
+
+.footer_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 103.12px;
+  padding-bottom: 29px;
+  border-bottom: 1px solid #cbcbcb;
+  margin-bottom: 57px;
+}
+
+.group {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1237.62px;
+}
+
+.copyright {
+  font-family: var(--third-family);
+  font-weight: 500;
+  font-size: 17px;
+  color: #999;
+}

@@ -2,3 +2,11 @@
   display: flex;
   gap: 53.49px;
 }
+
+.list_header {
+  gap: 53.49px;
+}
+
+.list_footer {
+  gap: 70px;
+}
