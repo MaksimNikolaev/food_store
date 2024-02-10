@@ -1,0 +1,10 @@
+.link {
+  font-family: var(--third-family);
+  font-weight: 500;
+  font-size: 17.83px;
+  color: #606060;
+}
+
+.active {
+  color: var(--blue-color)
+}
