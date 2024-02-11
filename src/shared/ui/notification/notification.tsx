@@ -16,7 +16,7 @@ export const Notification: FC<TNotification> = ({
       <div className={styles.group}>
         <img className={styles.img} src={card.photo} alt='food'></img>
         <div>
-          <h2 className={styles.title}>{card.name}</h2>
+          <h3 className={styles.title}>{card.name}</h3>
           <p className={styles.status}>{card.status}</p>
         </div>        
       </div>

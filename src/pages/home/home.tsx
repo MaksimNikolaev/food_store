@@ -1,4 +1,5 @@
 
+import { Infographics } from '../../entities/infographics';
 import { EnjoyBlock } from '../../widgets/enjoy-block';
 import { Footer } from '../../widgets/footer';
 import { Header } from '../../widgets/header';
@@ -10,6 +11,7 @@ export const Home = () => {
       <Header />
       <main>
         <EnjoyBlock/>
+        <Infographics/>
       </main>
       <Footer />
     </div>
