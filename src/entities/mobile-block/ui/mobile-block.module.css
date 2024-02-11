@@ -1,0 +1,65 @@
+.mobile_block {
+  padding: 103.5px 96px 0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #cbcbcb;
+  padding-bottom: 120px;
+}
+
+.img {
+  width: 371.46px;
+  height: 625px;
+  object-fit: contain;
+  transform: translateX(113px);
+}
+
+.group {
+  max-width: 545px;
+  padding: 91px 0 0 0;
+}
+
+.title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 50.92px;
+  line-height: 1.14;
+  color: #18181b;
+  margin-bottom: 64px;
+  white-space: pre-wrap;
+}
+
+.list {
+  list-style: disc;
+  padding-left: 30px;
+}
+
+.list_item {
+  font-family: var(--third-family);
+  font-weight: 400;
+  font-size: 20.33px;
+  line-height: 1.5;
+  color: #676767;
+  margin-bottom: 27.94px;
+}
+
+.list_item:last-child {
+  margin-bottom: 67px;
+}
+
+.icon {
+  padding-left: 14.91px;
+}
+
+.btn {
+  position: relative;
+}
+
+.btn::after {
+  content: url('../../../shared/assets/icons/spiral.svg');
+  position: absolute;
+  bottom: -60px;
+  right: 215px;
+}

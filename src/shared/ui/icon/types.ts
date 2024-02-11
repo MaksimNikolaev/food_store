@@ -1,6 +1,12 @@
 import { SVGProps } from 'react';
 
-export type IconName = 'logo' | 'inst' | 'linkedin' | 'facebook' | 'twitter';
+export type IconName =
+  | 'logo'
+  | 'inst'
+  | 'linkedin'
+  | 'facebook'
+  | 'twitter'
+  | 'arrow';
 
 export type TIcon = {
   name: IconName;
