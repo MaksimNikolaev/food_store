@@ -8,7 +8,9 @@ export type IconName =
   | 'twitter'
   | 'arrow'
   | 'star'
-  | 'arrow_grey';
+  | 'arrow_grey'
+  | 'expense'
+  | 'vocher';
 
 export type TIcon = {
   name: IconName;

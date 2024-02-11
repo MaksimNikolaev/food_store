@@ -17,8 +17,14 @@ export const Notification: FC<TNotification> = ({
         <img className={styles.img} src={card.photo} alt='food'></img>
         <div>
           <h3 className={styles.title}>{card.name}</h3>
-          <p className={styles.status}>{card.status}</p>
-        </div>        
+          <p
+            className={`${styles.status} ${
+              card.status.toLowerCase() === 'cancelled' ? styles.status_cancel : ''
+            }`}
+          >
+            {card.status}
+          </p>
+        </div>
       </div>
       <time className={styles.time}>{card.time}</time>
     </div>

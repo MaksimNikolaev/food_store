@@ -1,4 +1,4 @@
-import food from '../../../shared/assets/images/Food.webp';
+import food from '../../../shared/assets/images/food.webp';
 
 export const notification = {
   name: 'Chicken Hell',
