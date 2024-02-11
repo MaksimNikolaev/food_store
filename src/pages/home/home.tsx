@@ -1,6 +1,7 @@
 
 import { Infographics } from '../../entities/infographics';
 import { MobileBlock } from '../../entities/mobile-block';
+import { Recipes } from '../../entities/recipes';
 import { EnjoyBlock } from '../../widgets/enjoy-block';
 import { Footer } from '../../widgets/footer';
 import { Header } from '../../widgets/header';
@@ -14,6 +15,7 @@ export const Home = () => {
         <EnjoyBlock/>
         <Infographics/>
         <MobileBlock/>
+        <Recipes/>
       </main>
       <Footer />
     </div>

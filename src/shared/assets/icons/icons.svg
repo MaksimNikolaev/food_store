@@ -32,4 +32,13 @@
 <path d="M14.4561 5.64453L22.3581 13.5466L14.4561 21.4487" stroke="white" stroke-width="2.25773" stroke-linecap="round" stroke-linejoin="round"/>
 </symbol>
 
+<symbol id="arrow_grey" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M2 9.90234H17.8041" stroke="#ACADB9" stroke-width="2.25773" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M9.90234 2L17.8044 9.90206L9.90234 17.8041" stroke="#ACADB9" stroke-width="2.25773" stroke-linecap="round" stroke-linejoin="round" />
+</symbol>
+
+<symbol id="star" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M11.9993 17.688C13.7033 18.6207 15.2019 17.4903 14.876 15.512L14.2909 11.9599L16.7696 9.44431C18.1482 8.04526 17.5786 6.21206 15.6708 5.92343L12.2453 5.40519L10.7209 2.1894C9.86699 0.388064 8.01299 0.36869 7.1575 2.17341L5.62555 5.40519L2.19999 5.92343C0.294844 6.21165 -0.279337 8.04328 1.10119 9.44431L3.57994 11.9599L2.99479 15.512C2.66935 17.4875 4.16507 18.622 5.87149 17.688L8.9354 16.0109L11.9993 17.688Z" fill="#6C5FBC" />
+</symbol>
+
 </svg>

@@ -6,7 +6,9 @@ export type IconName =
   | 'linkedin'
   | 'facebook'
   | 'twitter'
-  | 'arrow';
+  | 'arrow'
+  | 'star'
+  | 'arrow_grey';
 
 export type TIcon = {
   name: IconName;
