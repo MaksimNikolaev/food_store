@@ -52,6 +52,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease-in-out;
 }
 
 .category {
@@ -108,4 +109,24 @@
 
 .icon  {
   padding-left: 20px;  
+}
+
+.group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list_item:hover .img {
+  transform: translateY(-45.6px);
+}
+
+.list_item:hover .bookmark {
+  overflow: visible;
+  opacity: 1;
+}
+
+.bookmark {
+  overflow: hidden;
+  opacity: 0;
+  cursor: pointer;
 }

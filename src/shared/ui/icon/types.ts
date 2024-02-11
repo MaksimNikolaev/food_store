@@ -12,7 +12,8 @@ export type IconName =
   | 'expense'
   | 'vocher'
   | 'raiting'
-  | 'quote';
+  | 'quote'
+  | 'bookmark';
 
 export type TIcon = {
   name: IconName;

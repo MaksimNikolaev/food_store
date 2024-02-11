@@ -37,6 +37,18 @@
   background-color: var(--white-color);
   max-width: 528px;
   box-sizing: border-box;
+  position: relative;
+}
+
+.review::after {
+  content: '';
+  position: absolute;
+  width: 574px;
+  height: 350px;
+  filter: blur(184.39422607421875px);
+  background: #323142;
+  opacity: 0.2;
+  z-index: -1;
 }
 
 .img {

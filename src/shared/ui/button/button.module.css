@@ -9,6 +9,11 @@
   max-height: 59px;
   cursor: pointer;
   letter-spacing: 0.01px;
+  transition: opacity ease-in-out .3s;
+}
+
+.btn:hover {
+  opacity: .8;
 }
 
 .primary {
