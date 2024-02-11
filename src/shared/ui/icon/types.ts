@@ -10,7 +10,9 @@ export type IconName =
   | 'star'
   | 'arrow_grey'
   | 'expense'
-  | 'vocher';
+  | 'vocher'
+  | 'raiting'
+  | 'quote';
 
 export type TIcon = {
   name: IconName;

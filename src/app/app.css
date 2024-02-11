@@ -115,6 +115,10 @@
   font-display: swap;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Poppins', 'Inter', 'Roboto', -apple-system, sans-serif;
   background: #f9f9f9;

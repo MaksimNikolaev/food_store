@@ -7,6 +7,7 @@ import { menuFooterList } from '../model';
 export const Footer = () => {
   return (
     <footer className={styles.footer}>
+      <div className={styles.container}>
       <div className={styles.footer_wrapper}>
         <Logo size='sm' />
         <Navigation menu={menuFooterList} place='footer' />
@@ -15,6 +16,7 @@ export const Footer = () => {
         <p className={styles.copyright}>© 2023 EATLY All Rights Reserved.</p>
         <Social />
       </div>
+      </div>      
     </footer>
   );
 };

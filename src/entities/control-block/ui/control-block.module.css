@@ -1,4 +1,7 @@
 .control {
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
   padding: 134px 83px 0 122px;
 }
 

@@ -1,0 +1,129 @@
+.reviews {  
+  padding: 116px 0 95px 230px;
+}
+
+.title {
+  max-width: 1440px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 0.56;
+  color: #323142;
+  text-align: center;
+  transform: translateX(10px);
+  margin-bottom: 80px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 44px;
+  padding-left: 117px;
+}
+
+.review {
+  display: grid;
+  justify-items: end;
+  align-items: center;
+  grid-template-columns: 71.04px minmax(150px, 1fr) 1fr;
+  grid-template-areas: 
+    'avatar info quote'
+    'text text text'
+    'raiting raiting raiting';
+  column-gap: 20.5px;
+  row-gap: 31.96px;
+  padding: 38px 43px;
+  border-radius: 20px;
+  background-color: var(--white-color);
+  max-width: 528px;
+  box-sizing: border-box;
+}
+
+.img {
+  grid-area: avatar;
+  width: 71.04px;
+  height: 71.04px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.group {
+  grid-area: info;
+  justify-self: flex-start;
+}
+
+.name {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #030314;
+}
+
+.date {
+  font-family: var(--font6);
+  font-weight: 500;
+  font-size: 16.71px;
+  line-height: 1.56;
+  color: #5e5d5d;
+}
+
+.quote {
+  grid-area: quote;
+  transform: translateX(-6px);
+}
+
+.paragraph {
+  grid-area: text;
+  font-family: var(--font-family);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.45;
+  text-align: justify;
+  color: #636363;
+  margin-bottom: 7px;
+}
+
+.raiting {
+  grid-area: raiting;
+  justify-self: flex-start;
+}
+
+.review_text {
+  flex-shrink: 0;
+  padding: 38px 43px;
+  width: 528px;
+  background-color: var(--white-color);
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.review_text .paragraph {
+  margin-bottom: 34px;
+  color: #969696;
+}
+
+.review_slide {
+  display: flex;
+  align-items: flex-start;
+  width: 1200px;
+  min-height: 340px;
+  gap: 50px;
+  overflow-x: scroll;  
+}
+
+.review_slide::-webkit-scrollbar {
+  height: 11px;
+  border-radius: 50px;
+}
+
+.review_slide::-webkit-scrollbar-track {
+  background: #6c5fbc99;
+  border-radius: 50px;
+}
+
+.review_slide::-webkit-scrollbar-thumb {
+  background: var(--blue-color);
+  border-radius: 50px;
+}

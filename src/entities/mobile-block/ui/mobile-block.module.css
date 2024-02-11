@@ -1,4 +1,7 @@
 .mobile_block {
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
   padding: 103.5px 96px 0;
 }
 

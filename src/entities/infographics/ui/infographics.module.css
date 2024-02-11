@@ -1,4 +1,11 @@
 .ifographics {
+  background: #5C4EAE
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
   background: #5C4EAE url('../../../shared/assets/images/ifographics_bg.webp') no-repeat;
   padding: 49px 96px 54.7px;
 }

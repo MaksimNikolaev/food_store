@@ -1,4 +1,7 @@
-.header {  
+.header {
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
   padding: 57px 96px 0;  
 }
 

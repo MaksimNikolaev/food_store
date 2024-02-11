@@ -1,6 +1,9 @@
 .container {
   display: flex;
   gap: 37px;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
   padding: 49px 58.52px 74px 96px;
   min-height: 607px;
 }
