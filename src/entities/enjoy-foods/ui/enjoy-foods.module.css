@@ -1,0 +1,47 @@
+.container {
+  max-width: 568px;
+  padding-top: 65px;
+}
+
+.count_user {  
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.14em;
+  color: #201F1F;
+  opacity: .2;
+  margin-bottom: 18px;
+}
+
+.count_user::before {
+  content: '';  
+  display: inline-block;
+  width: 74px;
+  height: 17px;
+  background: url('../../../shared/assets/icons/line.svg') no-repeat 0 10px;
+}
+
+.title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 75px;
+  margin-bottom: 16px;
+  letter-spacing: -3px;
+  line-height: 1.2;
+}
+
+.paragraph {
+  font-family: var(--third-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  color: #676767;
+  margin-bottom: 54px;
+  max-width: 499px;
+  text-align: justify;
+}
+
+.btn_group {
+  display: flex;
+  gap: 18px;
+}

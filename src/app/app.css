@@ -117,6 +117,7 @@
 
 body {
   font-family: 'Poppins', 'Inter', 'Roboto', -apple-system, sans-serif;
+  background: #f9f9f9;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -137,6 +138,7 @@ ul {
   list-style: none;
 }
 
+h1,
 h2,
 h3,
 h4,

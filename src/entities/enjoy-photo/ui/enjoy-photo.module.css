@@ -1,0 +1,15 @@
+.container {  
+  position: relative;
+}
+
+.notification {
+  position: absolute;
+  top: 31px;
+  right: 41.2px;
+}
+
+.graph {
+  position: absolute;
+  bottom: -10px;
+  left: 12px;
+}
