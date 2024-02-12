@@ -1,14 +1,15 @@
 import { Logo } from '../../../shared/ui/logo/logo';
 import { Navigation } from '../../../features/navigation';
 import styles from './header.module.css';
-import { menuHeaderList } from '../model/constants';
+import { FC } from 'react';
+import { THeader } from '../model/types';
 
-export const Header = () => {
+export const Header:FC<THeader> = ({menuNavigationList}) => {
   return (
     <header className={styles.header}>
       <div className={styles.header_wrapper}>
         <Logo />
-        <Navigation menu={menuHeaderList} place='header' />
+        <Navigation menu={menuNavigationList} place='header' />
       </div>
     </header>
   );
