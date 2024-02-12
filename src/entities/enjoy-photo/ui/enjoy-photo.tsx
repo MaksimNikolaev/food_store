@@ -7,7 +7,7 @@ import { notification } from '../model';
 export const EnjoyPhoto = () => {
   return (
     <div className={styles.container}>
-      <img src={food} alt='plate of food'></img>      
+      <img className={styles.img} src={food} alt='plate of food'></img>      
       <Notification extraClass={styles.notification} card={notification}/>
       <img className={styles.graph} src={im3} alt='graph'></img>
     </div>

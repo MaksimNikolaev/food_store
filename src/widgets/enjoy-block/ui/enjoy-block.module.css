@@ -7,3 +7,19 @@
   padding: 49px 58.52px 74px 96px;
   min-height: 607px;
 }
+
+@media (max-width: 1280px) {  
+  .container {
+    gap: 37px;
+    padding: 49px 40px 74px;
+  }
+}
+
+@media (max-width: 768px) {  
+  .container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 37px;
+    padding: 49px 20px 74px;
+  }
+}
