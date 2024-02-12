@@ -10,8 +10,7 @@ const meta = {
   decorators : [(Story) => (<MemoryRouter><Story/></MemoryRouter>)],
   parameters: {    
     layout: 'centered',    
-  },  
-  tags: ['autodocs'], 
+  } 
 } satisfies Meta<typeof Header>;
 
 export default meta;
