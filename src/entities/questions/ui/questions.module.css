@@ -2,7 +2,7 @@
   max-width: 1440px;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 175px 144px 180px;
+  padding: 175px 144px 190px;
 }
 
 .title {
@@ -38,7 +38,7 @@
   font-family: var(--font-family);
   font-weight: 600;
   font-size: 23.42px;
-  line-height: 2.53;
+  line-height: 2.4;
   color: #323142;
 }
 
@@ -50,6 +50,14 @@
   margin: 0 auto 20px;
 }
 
+.accordion_collapse {
+  height: 0;
+  overflow: hidden;
+  border-bottom: 1px solid #cbcbcb;
+  will-change: height;
+  transition: height 0.3s;
+}
+
 .text {
   font-family: var(--font-family);
   font-weight: 400;
@@ -59,11 +67,7 @@
   color: #686868;
   max-width: 1140px;
   margin: 0 auto;
-  white-space: pre-wrap;
-  max-height: 0;
-  overflow: hidden;
-  will-change: max-height; 
-  transition: max-height 0.3s ease-in-out;
+  white-space: pre-wrap;  
 }
 
 .text::after {
@@ -71,7 +75,6 @@
   display: block;
   width: 100%;
   padding-bottom: 40px;
-  border-bottom: 1px solid #cbcbcb;
 }
 
 .text_visible::after {
@@ -79,7 +82,7 @@
 }
 
 .text_visible {
-  max-height: 600px;
+  height: auto;
 }
 
 .btn {
