@@ -14,9 +14,9 @@ export const Home = () => {
     <>
       <Header />
       <main>
-        <EnjoyBlock/>
-        {/* <Infographics/>
-        <MobileBlock/>
+        {/* <EnjoyBlock/> */}
+        <Infographics/>
+        {/* <MobileBlock/>
         <Recipes/>
         <ControlBlock/>
         <Reviews/>
