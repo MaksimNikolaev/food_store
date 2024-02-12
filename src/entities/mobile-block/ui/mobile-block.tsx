@@ -39,6 +39,7 @@ export const MobileBlock = () => {
                 name='arrow'
                 width={27.09}
                 height={27.09}
+                aria-hidden="true"
               />
             </Button>
           </div>

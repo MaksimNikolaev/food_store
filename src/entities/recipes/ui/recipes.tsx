@@ -20,6 +20,7 @@ export const Recipes = () => {
         <Link to={'/#'} className={styles.link}>
           View All
           <Icon
+            aria-hidden="true"
             className={styles.icon}
             name='arrow_grey'
             width={18}

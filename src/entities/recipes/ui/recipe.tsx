@@ -12,7 +12,7 @@ export const Recipe: FC<TRecipe> = ({ recipe }) => {
           decoding='async'
           className={styles.img}
           src={recipe.image}
-          alt={recipe.title}
+          alt={`Dish with ${recipe.title}`}
         />
       </div>
       <div className={styles.recipes_info}>

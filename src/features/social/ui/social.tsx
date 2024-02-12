@@ -8,6 +8,7 @@ export const Social = () => {
       {socialList.map(item => (
         <li key={item.id}>
           <Icon
+            aria-label={item.name}
             name={item.name}
             width={item.width}
             height={item.height}

@@ -30,6 +30,7 @@ export const Logo: FC<Partial<TLogo>> = ({ name = 'eatly', size = 'xs' }) => {
   return (
     <div style={{ gap: sizes[size].gap }} className={styles.logo}>
       <Icon
+        aria-label='logo'
         width={sizes[size].widthLogo}
         height={sizes[size].heightLogo}
         name={'logo'}
