@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { Icon } from '../icon/icon';
 import styles from './logo.module.css';
 import { TLogo } from './types';
+import { useNavigate } from 'react-router-dom';
 
 /**
  * Компонент логотипа.
@@ -12,6 +13,7 @@ import { TLogo } from './types';
  */
 
 export const Logo: FC<Partial<TLogo>> = ({ name = 'eatly', size = 'xs' }) => {
+  const navigate = useNavigate();
   const sizes = {
     xs: {
       widthLogo: 45.94,
@@ -27,8 +29,12 @@ export const Logo: FC<Partial<TLogo>> = ({ name = 'eatly', size = 'xs' }) => {
     },
   };
 
+  const handleClick = () => {
+    navigate('/');
+  }
+
   return (
-    <div style={{ gap: sizes[size].gap }} className={styles.logo}>
+    <div onClick={handleClick} style={{ gap: sizes[size].gap }} className={styles.logo}>
       <Icon
         aria-label='logo'
         width={sizes[size].widthLogo}
