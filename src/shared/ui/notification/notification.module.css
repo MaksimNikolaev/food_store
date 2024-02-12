@@ -84,10 +84,8 @@
 @media (max-width: 1280px) {  
   .container_xs {
     max-width: 279.4px;
-  }  
-  .container_sm {
-    max-width: 293.4px;
   }
+
   .img {
     width: 65.5px;
     height: 68px;
@@ -109,10 +107,7 @@
 @media (max-width: 1024px) {  
   .container_xs {
     max-width: 223px;
-  }  
-  .container_sm {
-    max-width: 234px;
-  }  
+  }
   .group {
     gap: 11px;
   }

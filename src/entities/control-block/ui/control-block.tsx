@@ -8,11 +8,11 @@ export const ControlBlock = () => {
   return (
     <section className={styles.control}>
       <div className={styles.wrapper}>
-        <div>
+        <div className={styles.column}>
           <h2 className={styles.title}>Control <SpanColor>Purchases</SpanColor> Via Dashboard</h2>
           <ul className={styles.list}>
             {notifications.map((food, i) => (
-              <li key={i}>
+              <li key={i} className={styles.notification_item}>
                 <Notification size='sm' card={food}/>
               </li>
             ))}

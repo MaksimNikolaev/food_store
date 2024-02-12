@@ -27,3 +27,15 @@
   color: var(--blue-color);
   padding: 18px 28px 17px 27px;
 }
+
+@media (max-width: 390px) {
+  .primary {
+    padding: 15px 28px 14px 27px;
+  }  
+  .secondary {
+    padding: 15px 25px 14px 24px;
+  }
+  .btn {    
+    font-size: 14px;    
+  }
+}
