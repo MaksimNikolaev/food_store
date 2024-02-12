@@ -19,8 +19,8 @@ export const Home = () => {
         <MobileBlock/>
         <Recipes/>
         <ControlBlock/>
-        {/* <Reviews/>
-        <Questions/> */}
+        <Reviews/>
+        <Questions/>
       </main>
       <Footer />
     </>
