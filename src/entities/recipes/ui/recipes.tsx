@@ -14,6 +14,7 @@ export const Recipes = () => {
         </h2>
         <ul className={styles.list}>
           {recipesData.map(recipe => (
+            //P.S.Паттерн Фабрика применяется для создания однотипных объектов (в данном случае, объектов рецептов)
             <Recipe key={recipe.id} recipe={recipe}/>
           ))}
         </ul>

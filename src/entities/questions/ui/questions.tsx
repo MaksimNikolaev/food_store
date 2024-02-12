@@ -5,7 +5,9 @@ import { Question } from './question';
 import styles from './questions.module.css';
 
 export const Questions = () => {
-  const [openId, setId] = useState<null | number>(null);  
+  /* P.S.Паттерн Состояние В данном случае, компонент Questions использует хук useState 
+  для управления переменной openId, которая отслеживает открытый вопрос */
+  const [openId, setId] = useState<null | number>(null);
 
   return (
     <section className={styles.questions}>
@@ -17,6 +19,7 @@ export const Questions = () => {
           <Question
             key={question.id}
             isOpen={question.id === openId}
+            /* P.S.Паттерн Наблюдатель подписываем наш интерфейс на клик*/
             onClick={() =>
               question.id === openId ? setId(null) : setId(question.id)
             }
