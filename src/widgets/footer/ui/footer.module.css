@@ -31,3 +31,41 @@
   font-size: 17px;
   color: #999;
 }
+
+@media (max-width: 1280px) {
+  .container {    
+    padding: 96px 40px 81px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {    
+    padding: 96px 20px 81px;
+  }
+  .group {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .copyright {
+    word-spacing: nowrap;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer_wrapper {    
+    gap: 35px;
+    flex-wrap: wrap;
+  }  
+}
+
+@media (max-width: 390px) {
+  .container {    
+    padding: 45px 10px 40px;
+  }
+  .footer_wrapper {    
+    margin-bottom: 35px;
+  }
+  .copyright {
+    font-size: 15px;
+  }
+}

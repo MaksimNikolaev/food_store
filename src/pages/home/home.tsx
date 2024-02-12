@@ -14,13 +14,13 @@ export const Home = () => {
     <>
       <Header />
       <main>
-        <EnjoyBlock/>
+        {/* <EnjoyBlock/>
         <Infographics/>
         <MobileBlock/>
         <Recipes/>
         <ControlBlock/>
         <Reviews/>
-        <Questions/>
+        <Questions/> */}
       </main>
       <Footer />
     </>

@@ -12,3 +12,28 @@
   padding-bottom: 35.68px;
   border-bottom: 1px solid #cbcbcb;
 }
+
+@media (max-width: 1280px) {
+  .header {    
+    padding: 57px 40px 0;  
+  }
+}
+
+@media (max-width: 768px) {
+  .header {    
+    padding: 57px 20px 0;  
+  }
+  .header_wrapper {
+    gap: 50px
+  }
+}
+
+@media (max-width: 390px) {
+  .header {    
+    padding: 30px 10px 0;  
+  }
+  .header_wrapper {
+    gap: 40px;
+    padding-bottom: 15px;
+  }
+}

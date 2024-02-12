@@ -10,3 +10,15 @@
 .list_footer {
   gap: 70px;
 }
+
+@media (max-width: 768px) {
+  .list_footer {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 390px) {
+  .list_header {
+    gap: 35px;
+  }
+}

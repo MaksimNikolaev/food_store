@@ -2,3 +2,15 @@
   display: flex;
   gap: 53.8px;
 }
+
+@media (max-width: 768px) {
+  .list {    
+    gap: 35px;
+  }  
+}
+
+@media (max-width: 390px) {
+  .container {    
+    padding: 96px 10px 81px;
+  }  
+}
