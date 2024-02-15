@@ -10,7 +10,7 @@ export const Questions = () => {
   const [openId, setId] = useState<null | number>(null);
 
   return (
-    <section className={styles.questions}>
+    <section id='faq' className={styles.questions}>
       <h2 className={styles.title}>
         Frequently Asked <SpanColor>Questions</SpanColor>
       </h2>

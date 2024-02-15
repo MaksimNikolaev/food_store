@@ -7,7 +7,7 @@ import { Recipe } from './recipe';
 
 export const Recipes = () => {
   return (
-    <section className={styles.recipes}>
+    <section id='recipe' className={styles.recipes}>
       <div className={styles.wrapper}>
         <h2 className={styles.title}>
           Our Top <SpanColor>Recipes</SpanColor>

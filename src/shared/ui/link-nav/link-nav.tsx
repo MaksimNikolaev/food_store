@@ -1,6 +1,6 @@
-import { NavLink } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styles from './link-nav.module.css';
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import { TLinkNav } from './types';
 
 /**
@@ -12,14 +12,26 @@ import { TLinkNav } from './types';
  */
 
 export const LinkNav: FC<TLinkNav> = ({ item, path }) => {
-  return (
-    <NavLink
-      to={path}
-      className={({ isActive }) =>
-        `${styles.link} ${isActive ? styles.active : ''}`
+  const location = useLocation();
+
+  useEffect(() => {
+    // Проверяем, содержит ли текущий маршрут якорную ссылку
+    if (location.hash) {
+      const targetElement = document.querySelector(location.hash);
+
+      // Проверяем, найден ли элемент с указанным якорем
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
       }
+    }
+  }, [location]);
+
+  return (
+    <Link
+      to={path}
+      className={styles.link}
     >
       {item}
-    </NavLink>
+    </Link>
   );
 };
