@@ -7,19 +7,171 @@
   padding: 49px 58.52px 74px 96px;
   min-height: 607px;
 }
+.enjoy_food {
+  max-width: 568px;
+  padding-top: 65px;
+}
 
-@media (max-width: 1280px) {  
+.count_user {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.14em;
+  color: #201f1f;
+  opacity: 0.2;
+  margin-bottom: 18px;
+}
+
+.count_user::before {
+  content: '';
+  display: inline-block;
+  width: 74px;
+  height: 17px;
+  background: url('../../../shared/assets/icons/line.svg') no-repeat 0 10px;
+}
+
+.title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 75px;
+  margin-bottom: 16px;
+  letter-spacing: -3px;
+  line-height: 1.2;
+}
+
+.paragraph {
+  font-family: var(--third-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  color: #676767;
+  margin-bottom: 54px;
+  max-width: 499px;
+  text-align: justify;
+}
+
+.btn_group {
+  display: flex;
+  gap: 18px;
+}
+
+.enjoy_photo {  
+  position: relative;
+}
+
+.notification {
+  position: absolute;
+  top: 31px;
+  right: 41.2px;
+}
+
+.graph {
+  width: 283px;
+  height: 308px;
+  object-fit: contain;
+  position: absolute;
+  bottom: -10px;
+  left: 12px;
+}
+
+.img {
+  width: 681px;
+  height: 611px;
+  object-fit: contain;
+}
+
+@media (max-width: 1280px) {
   .container {
     gap: 37px;
     padding: 49px 40px 74px;
   }
+  .title {
+    font-size: 60px;
+  }
+  .img {
+    width: 579px;
+    height: 519px;
+  }
+  .graph {
+    width: 240px;
+    height: 262px;
+  }
+  .notification {
+    top: 26px;
+    right: 35px;
+  }
 }
 
-@media (max-width: 768px) {  
+@media (max-width: 1024px) {
+  .title {
+    font-size: 35px;
+  }
+  .paragraph {
+    line-height: 1.56;
+    font-size: 14px;
+    margin-bottom: 45px;
+    max-width: 499px;
+  }
+  .img {
+    width: 418px;
+    height: 374px;
+  }
+  .graph {
+    width: 173px;
+    height: 188px;
+    bottom: 100px;
+  }
+  .notification {
+    top: 22px;
+    right: 29px;
+  }  
+}
+
+@media (max-width: 768px) {
   .container {
     flex-wrap: wrap;
     justify-content: center;
     gap: 37px;
     padding: 49px 20px 74px;
   }
+  .enjoy_food {
+    max-width: none;
+    padding-top: 0;
+  }
+  .paragraph {
+    max-width: none;
+  }
+  .graph {
+    bottom: 0;
+  }
+}
+
+@media (max-width: 500px) {  
+  .img {
+    width: 355px;
+    height: 317px;
+  }
+  .graph {
+    width: 147px;
+    height: 159px;    
+  }
+  .notification {
+    top: -10px;
+    right: 35px;
+  }  
+}
+
+@media (max-width: 390px) {  
+  .img {
+    width: 300px;
+    height: 269px;
+  }
+  .graph {
+    width: 125px;
+    height: 135px;    
+  }
+  .notification {
+    top: -20px;
+    right: 35px;
+  }  
 }
