@@ -1,14 +1,17 @@
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './app.css';
-import { Home } from '../pages/home/home';
-import { Blog } from '../pages/blog/blog';
+import { Provider } from 'react-redux';
+import { store } from './store';
+import { Routing } from './routing';
 
 function App() {
   return (
-    <Routes>
-      <Route element={<Home />} path='/' />
-      <Route element={<Blog />} path='/blog' />
-    </Routes>
+    <BrowserRouter>
+       {/* P.S.Паттерн Одиночка В данном случае, он у нас один и все компоненты обращаются к нему */}
+      <Provider store={store}>
+        <Routing/>
+      </Provider>
+    </BrowserRouter>
   );
 }
 

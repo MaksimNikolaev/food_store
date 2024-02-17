@@ -3,6 +3,7 @@ import '../../../app/App'
 import food1 from '../../../shared/assets/images/food1.webp'
 
 import { Recipe } from './recipe';
+import { formateDate } from '../../../shared/utils/function/date';
 
 const meta = {
   title: 'Recipe',
@@ -23,8 +24,8 @@ export const RecipePizza: Story = {
       image: food1,
       category: 'Pizza',
       title: 'The Chicken King',
-      time: '24min •',
-      raiting: '4.8'
+      time: formateDate(24),
+      raiting: 4.8
     }
   },
 };
