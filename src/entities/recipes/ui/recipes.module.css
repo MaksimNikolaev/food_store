@@ -132,6 +132,13 @@
   cursor: pointer;
 }
 
+.no_comment {
+  font-family: var(--font-family);
+  text-align: center;
+  font-size: 18px;
+  color: #636363;
+}
+
 @media (max-width: 1280px) {
   .recipes {    
     padding: 100px 40px 0;  

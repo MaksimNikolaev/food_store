@@ -5,3 +5,5 @@ export const menuNavigationList = [
 ];
 
 export const SERVER_BASE = 'https://dummyjson.com';
+export const SERVER_NOT_RESPONDING =
+  'The server is not responding. Please try again.';
