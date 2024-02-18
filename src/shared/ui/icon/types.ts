@@ -13,7 +13,8 @@ export type IconName =
   | 'vocher'
   | 'raiting'
   | 'quote'
-  | 'bookmark';
+  | 'bookmark'
+  | 'arrow_navigation';
 
 export type TIcon = {
   name: IconName;

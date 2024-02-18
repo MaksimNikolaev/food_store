@@ -1,0 +1,51 @@
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { SERVER_BASE } from '../../../shared/utils/constants/constants';
+import checkResponse from '../../../shared/utils/function/functions';
+import { TPostsSlice } from './types';
+
+const postsInitialState: TPostsSlice = {
+  posts: null,
+  postsSuccess: false,
+  postsloading: false,
+  postsError: null,
+};
+
+// запрос получения доступа страницы товара
+export const getPosts = createAsyncThunk('posts/getPosts', async (skip: number, { rejectWithValue }) => {  
+  try {
+    const response = await fetch(`${SERVER_BASE}/posts?limit=12&skip=${skip}&select=title,tags,reactions,body`, {
+    });
+    return await checkResponse(response);
+  } catch (error) {
+    return rejectWithValue(error);
+  }
+});
+
+const postsSlice = createSlice({
+  name: 'posts',
+  initialState: postsInitialState,
+  reducers: {
+    resetState: () => postsInitialState,
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(getPosts.pending, (state) => {
+        state.postsloading = true;
+        state.postsError = null;
+        state.postsSuccess = false;
+      })
+      .addCase(getPosts.fulfilled, (state, action) => {
+        state.posts = action.payload;
+        state.postsloading = false;
+        state.postsSuccess = true;
+      })
+      .addCase(getPosts.rejected, (state, action) => {
+        state.postsloading = false;
+        state.postsError = action.payload;
+      })     
+  },
+});
+
+export const { resetState } = postsSlice.actions;
+
+export const postsReducer = postsSlice.reducer;

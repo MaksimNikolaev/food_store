@@ -9,7 +9,7 @@ export const store = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(
       recipesApi.middleware,
-      reviewApi.middleware   
+      reviewApi.middleware 
     ),
   devTools: true,
 });

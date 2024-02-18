@@ -1,0 +1,21 @@
+.btn_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn_rotate {
+  transform: rotate(180deg);
+}
+
+.btn_disabled {
+  opacity: .2;
+  cursor: not-allowed;
+}
