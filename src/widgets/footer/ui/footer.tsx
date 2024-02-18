@@ -1,8 +1,8 @@
 import { Logo } from '../../../shared/ui/logo/logo';
-import { Navigation } from '../../../features/navigation';
 import styles from './footer.module.css';
-import { Social } from '../../../features/social';
 import { menuNavigationList } from '../../../shared/utils/constants/constants';
+import { Social } from '../../../shared/ui/social/social';
+import { Navigation } from '../../../shared/ui/navigation/navigation';
 
 export const Footer = () => {
   return (

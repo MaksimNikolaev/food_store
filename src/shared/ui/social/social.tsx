@@ -1,5 +1,5 @@
 import { Icon } from '../../../shared/ui/icon/icon';
-import { socialList } from '../model';
+import { socialList } from './constants';
 import styles from './social.module.css';
 
 export const Social = () => { 
