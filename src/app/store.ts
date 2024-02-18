@@ -3,13 +3,17 @@ import { TypedUseSelectorHook, useDispatch as dispatchHook, useSelector as selec
 import { recipesApi } from '../entities/recipes/model';
 import { rootReducer } from './root-reducer';
 import { reviewApi } from '../entities/reviews/model';
+import { postApi } from '../entities/full-post/model';
+import { commentsApi } from '../entities/comments/model';
 
 export const store = configureStore({
   reducer: rootReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(
       recipesApi.middleware,
-      reviewApi.middleware 
+      reviewApi.middleware,
+      postApi.middleware,
+      commentsApi.middleware
     ),
   devTools: true,
 });

@@ -1,7 +1,9 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { SERVER_BASE } from '../../../shared/utils/constants/constants';
-import checkResponse from '../../../shared/utils/function/functions';
-import { TPostsSlice } from './types';
+import checkResponse, {
+  formatTags,
+} from '../../../shared/utils/function/functions';
+import { TPost, TPosts, TPostsSlice } from './types';
 
 const postsInitialState: TPostsSlice = {
   posts: null,
@@ -11,15 +13,31 @@ const postsInitialState: TPostsSlice = {
 };
 
 // запрос получения доступа страницы товара
-export const getPosts = createAsyncThunk('posts/getPosts', async (skip: number, { rejectWithValue }) => {  
-  try {
-    const response = await fetch(`${SERVER_BASE}/posts?limit=12&skip=${skip}&select=title,tags,reactions,body`, {
-    });
-    return await checkResponse(response);
-  } catch (error) {
-    return rejectWithValue(error);
+export const getPosts = createAsyncThunk(
+  'posts/getPosts',
+  async (skip: number, { rejectWithValue }) => {
+    try {
+      const response = await fetch(
+        `${SERVER_BASE}/posts?limit=12&skip=${skip}&select=title,tags,reactions,body`,
+        {}
+      );
+      const responseData: TPosts<TPost> = await checkResponse(response);
+      // Преобразование тегов каждого поста
+      const formattedPosts = responseData.posts.map(post => ({
+        ...post,
+        tags: formatTags(post.tags),
+      }));
+
+      // Возвращаем объект с отформатированными постами и другими данными
+      return {
+        ...responseData,
+        posts: formattedPosts,
+      };
+    } catch (error) {
+      return rejectWithValue(error);
+    }
   }
-});
+);
 
 const postsSlice = createSlice({
   name: 'posts',
@@ -27,9 +45,9 @@ const postsSlice = createSlice({
   reducers: {
     resetState: () => postsInitialState,
   },
-  extraReducers: (builder) => {
+  extraReducers: builder => {
     builder
-      .addCase(getPosts.pending, (state) => {
+      .addCase(getPosts.pending, state => {
         state.postsloading = true;
         state.postsError = null;
         state.postsSuccess = false;
@@ -42,7 +60,7 @@ const postsSlice = createSlice({
       .addCase(getPosts.rejected, (state, action) => {
         state.postsloading = false;
         state.postsError = action.payload;
-      })     
+      });
   },
 });
 

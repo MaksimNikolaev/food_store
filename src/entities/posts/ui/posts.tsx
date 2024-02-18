@@ -5,6 +5,10 @@ import { useSelector } from '../../../app/store';
 export const Posts = () => {
   const { posts } = useSelector(state => state.posts);
 
+  if (!posts) {
+    return null;
+  }
+
   return (
     <div className={styles.posts_container}>
       {posts?.posts.length ? (

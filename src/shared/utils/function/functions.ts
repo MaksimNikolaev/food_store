@@ -15,3 +15,8 @@ export default function checkResponse(res: Response) {
         return Promise.reject(err);
       });
 }
+
+// Функция для преобразования массива тегов в строку с символами # и запятыми
+export const formatTags = (tags: string[]): string => {
+  return tags.map(tag => `#${tag}`).join(', ');
+};

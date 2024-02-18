@@ -1,0 +1,54 @@
+.container {
+  padding: 126px 96px 50px;
+  box-sizing: border-box;
+}
+
+.title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 37px;
+  line-height: 119%;
+  color: #252525;
+  margin-bottom: 32px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.written, .tags {
+  font-weight: 400;
+  font-size: 15px;
+  color: #8d8d8d;
+  line-height: 1;
+}
+
+.user_name {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.53;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 2;
+  text-align: justify;
+  color: #252525;
+  margin-bottom: 90px;
+}

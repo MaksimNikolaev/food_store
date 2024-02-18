@@ -35,7 +35,6 @@ export const MobileBlock = () => {
             <Button variant='primary'>
               Download
               <Icon
-                className={styles.icon}
                 name='arrow'
                 width={27.09}
                 height={27.09}

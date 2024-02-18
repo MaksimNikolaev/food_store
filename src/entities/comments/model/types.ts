@@ -1,6 +1,6 @@
 import { TComment } from "../../../shared/ui/comment/types";
 
-export type TReviewData = {
+export type TComments = {
   comments: TComment[];
   total: number;
   skip: number;

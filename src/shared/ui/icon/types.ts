@@ -8,7 +8,7 @@ export type IconName =
   | 'twitter'
   | 'arrow'
   | 'star'
-  | 'arrow_grey'
+  | 'arrow_left'
   | 'expense'
   | 'vocher'
   | 'raiting'

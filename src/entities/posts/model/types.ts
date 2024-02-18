@@ -1,7 +1,7 @@
 export type TPost = {
   id: number;
   title: string;
-  tags: string[];
+  tags: string;
   reactions: number;
   body: string;
 };

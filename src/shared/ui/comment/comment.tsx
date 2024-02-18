@@ -1,13 +1,13 @@
 import { FC } from 'react';
-import { Icon } from '../../../shared/ui/icon/icon';
-import styles from './reviews.module.css';
-import { TReview } from '../model/types';
+import { Icon } from '../icon/icon';
+import styles from './comment.module.css';
+import { TCommentComponent } from './types';
 
-export const Review: FC<TReview> = ({comment}) => {
+export const Comment: FC<TCommentComponent> = ({comment, extraClass}) => {
   const { user, body } = comment;
   
   return (
-    <article className={styles.review_text}>
+    <article className={`${styles.review_text} ${extraClass ?? ''}`}>
       <div className={styles.group}>
         <p className={styles.name}>{user.username}</p>
         <Icon
