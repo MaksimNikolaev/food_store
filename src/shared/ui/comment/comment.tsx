@@ -11,6 +11,7 @@ export const Comment: FC<TCommentComponent> = ({comment, extraClass}) => {
       <div className={styles.group}>
         <p className={styles.name}>{user.username}</p>
         <Icon
+          aria-hidden="true"
           className={styles.quote}
           name='quote'
           width={58.69}

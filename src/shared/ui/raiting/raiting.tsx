@@ -10,7 +10,7 @@ export const Raiting: FC<Partial<{ raiting: number; isRevert: boolean }>> = ({
     <div
       className={`${styles.wrapper} ${isRevert ? styles.wrapper_revert : ''}`}
     >
-      <Icon name='star' width={18} height={18} />
+      <Icon aria-label='raiting' name='star' width={18} height={18} />
       <span className={styles.raiting}>{raiting}</span>
     </div>
   );

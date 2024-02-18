@@ -62,14 +62,24 @@ export const NavigationPosts = () => {
         }`}
         onClick={handlePreviousPage}
       >
-        <Icon name='arrow_navigation' width={30} height={45} />
+        <Icon
+          aria-label='Previous posts'
+          name='arrow_navigation'
+          width={30}
+          height={45}
+        />
       </button>
       <button
         disabled={isDisabledNext}
         className={`${styles.btn} ${isDisabledNext ? styles.btn_disabled : ''}`}
         onClick={handleNextPage}
       >
-        <Icon name='arrow_navigation' width={30} height={45} />
+        <Icon
+          aria-label='Next posts'
+          name='arrow_navigation'
+          width={30}
+          height={45}
+        />
       </button>
     </div>
   );
