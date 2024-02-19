@@ -7,6 +7,7 @@ import { Button } from '../../../shared/ui/button/button';
 import { Icon } from '../../../shared/ui/icon/icon';
 import { getErrorText } from '../../../shared/utils/function/functions';
 import { toast } from 'react-toastify';
+import LoaderSmall from '../../../shared/ui/loaders/loader-small/loader-small';
 
 export const FullPost = () => {
   const { id } = useParams();
@@ -42,7 +43,7 @@ export const FullPost = () => {
     <div className={styles.container}>
       <h1 className={styles.title}>{post?.title}</h1>
       <div className={styles.wrapper}>
-        <div className={styles.group}>
+        {!user ? <LoaderSmall/> : <div className={styles.group}>
           <img className={styles.avatar} src={user?.image} alt='avatar'></img>
           <div>
             <p className={styles.written}>Written By</p>
@@ -50,7 +51,7 @@ export const FullPost = () => {
               className={styles.user_name}
             >{`${user?.firstName} ${user?.lastName}`}</p>
           </div>
-        </div>
+        </div>}
         <div>
           <Raiting raiting={post?.reactions} isRevert={true} />
           <p className={styles.tags}>{post?.tags}</p>
