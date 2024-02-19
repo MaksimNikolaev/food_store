@@ -58,7 +58,7 @@ export const FullPost = () => {
         </div>
       </div>
       <p className={styles.text}>{post?.body}</p>
-      <Button onClick={() => navigate(-1)} variant='secondary'>
+      <Button onClick={() => navigate('/blog')} variant='secondary'>
         <Icon aria-hidden="true" name='arrow_left' width={31} height={34} />
         All Articles
       </Button>
