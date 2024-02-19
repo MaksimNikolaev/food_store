@@ -65,8 +65,8 @@ export const NavigationPosts = () => {
         <Icon
           aria-label='Previous posts'
           name='arrow_navigation'
-          width={30}
-          height={45}
+          width={45}
+          height={60}
         />
       </button>
       <button
@@ -77,8 +77,8 @@ export const NavigationPosts = () => {
         <Icon
           aria-label='Next posts'
           name='arrow_navigation'
-          width={30}
-          height={45}
+          width={45}
+          height={60}
         />
       </button>
     </div>

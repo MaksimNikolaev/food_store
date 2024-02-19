@@ -1,8 +1,12 @@
 .container {
-  padding: 95px 118px 191px;
+  padding: 95px 134px 191px;
 }
 
 .title {
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 1.2;
+  color: #323142;
   text-align: center;
   margin-bottom: 97px;
 }
