@@ -8,12 +8,13 @@ export type IconName =
   | 'twitter'
   | 'arrow'
   | 'star'
-  | 'arrow_grey'
+  | 'arrow_left'
   | 'expense'
   | 'vocher'
   | 'raiting'
   | 'quote'
-  | 'bookmark';
+  | 'bookmark'
+  | 'arrow_navigation';
 
 export type TIcon = {
   name: IconName;

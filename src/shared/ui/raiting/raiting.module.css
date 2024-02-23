@@ -1,0 +1,17 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.wrapper_revert {
+  flex-direction: row-reverse;
+}
+
+.raiting {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 1;
+  color: #8e97a6;
+}

@@ -1,20 +1,20 @@
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './app.css';
-import { Home } from '../pages/home/home';
-import { Blog } from '../pages/blog/blog';
-import { Recipes } from '../pages/recipes/recipes';
-import { Contact } from '../pages/contact/contact';
-import { About } from '../pages/about/about';
+import { Provider } from 'react-redux';
+import { store } from './store';
+import { Routing } from './routing';
+import { Slide, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
-    <Routes>
-      <Route element={<Home />} path='/' />
-      <Route element={<Blog />} path='/blog' />
-      <Route element={<Recipes />} path='/recipes' />
-      <Route element={<Contact />} path='/contact' />
-      <Route element={<About />} path='/about' />
-    </Routes>
+    <BrowserRouter>
+       {/* P.S.Паттерн Одиночка В данном случае, он у нас один и все компоненты обращаются к нему */}
+      <Provider store={store}>
+        <Routing/>
+        <ToastContainer transition={Slide} />
+      </Provider>
+    </BrowserRouter>
   );
 }
 

@@ -1,33 +1,41 @@
-import { Link } from 'react-router-dom';
-import { Icon } from '../../../shared/ui/icon/icon';
 import { SpanColor } from '../../../shared/ui/span-color/span-color';
-import { recipesData } from '../model';
 import styles from './recipes.module.css';
 import { Recipe } from './recipe';
+import { useGetRecipesQuery } from '../model/rtkq';
+import { useEffect } from 'react';
+import { getErrorText } from '../../../shared/utils/function/functions';
+import { toast } from 'react-toastify';
+import Loader from '../../../shared/ui/loaders/loader';
 
 export const Recipes = () => {
+  const { data, isError, isFetching, error } = useGetRecipesQuery();
+
+  //Обработка ошибок
+  useEffect(() => {
+    if (isError && error) {
+      const textError = getErrorText(error);
+      toast.error(textError as string);
+    }
+  }, [isError, error]);
+
   return (
-    <section className={styles.recipes}>
+    <section id='recipe' className={styles.recipes}>
       <div className={styles.wrapper}>
         <h2 className={styles.title}>
-          Our Top <SpanColor>Recipes</SpanColor>
+          Our Top <SpanColor>Lunch</SpanColor>
         </h2>
         <ul className={styles.list}>
-          {recipesData.map(recipe => (
-            //P.S.Паттерн Фабрика применяется для создания однотипных объектов (в данном случае, объектов рецептов)
-            <Recipe key={recipe.id} recipe={recipe}/>
-          ))}
+          {isFetching ? (
+            <Loader />
+          ) : data?.length ? (
+            data?.map(recipe => (
+              //P.S.Паттерн Фабрика применяется для создания однотипных объектов (в данном случае, объектов рецептов)
+              <Recipe key={recipe.id} recipe={recipe} />
+            ))
+          ) : (
+            <p className={styles.no_comment}>Recipes not available</p>
+          )}
         </ul>
-        <Link to={'/#'} className={styles.link}>
-          View All
-          <Icon
-            aria-hidden="true"
-            className={styles.icon}
-            name='arrow_grey'
-            width={18}
-            height={18}
-          />
-        </Link>
       </div>
     </section>
   );

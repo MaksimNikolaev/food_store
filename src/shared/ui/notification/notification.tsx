@@ -23,7 +23,7 @@ export const Notification: FC<TNotification> = ({
       } ${extraClass}`}
     >
       <div className={styles.group}>
-        <img className={styles.img} src={card.photo} alt='photo of the food ordered'></img>
+        <img className={styles.img} src={card.photo} alt='food ordered'></img>
         <div>
           <h3 className={styles.title}>{card.name}</h3>
           <p

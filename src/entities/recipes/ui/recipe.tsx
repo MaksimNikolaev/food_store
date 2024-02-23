@@ -1,9 +1,10 @@
 import { FC } from 'react';
 import { Icon } from '../../../shared/ui/icon/icon';
 import styles from './recipes.module.css';
-import { TRecipe } from '../model';
+import { TRecipeComponent } from '../model';
+import { Raiting } from '../../../shared/ui/raiting/raiting';
 
-export const Recipe: FC<TRecipe> = ({ recipe }) => {
+export const Recipe: FC<TRecipeComponent> = ({ recipe }) => {
   return (
     <li className={styles.list_item}>
       <div className={styles.img_container}>
@@ -27,9 +28,8 @@ export const Recipe: FC<TRecipe> = ({ recipe }) => {
           />
         </div>
         <div className={styles.info}>
-          <time className={styles.time}>{recipe.time}</time>
-          <Icon name='star' width={18} height={18} />
-          <span className={styles.raiting}>{recipe.raiting}</span>
+          <time className={styles.time}>{recipe.time} •</time>
+          <Raiting raiting={recipe.raiting}/>
         </div>
       </div>
     </li>
