@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { SERVER_BASE } from '../../../shared/utils/constants/constants';
-import { TPost, TUser } from './types';
+import { TPost } from './types';
 import { formatTags } from '../../../shared/utils/function/functions';
 
 export const postApi = createApi({
@@ -19,13 +19,8 @@ export const postApi = createApi({
           tags: formatTags(res.tags)          
         }
       }, 
-    }),
-    getUser: build.query<TUser, number>({
-      query: (id: number) => ({
-        url: `${SERVER_BASE}/users/${id}`,
-      }),
-    }),
+    }),    
   }),
 });
 
-export const { useLazyGetPostQuery, useLazyGetUserQuery } = postApi;
+export const { useLazyGetPostQuery } = postApi;

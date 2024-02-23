@@ -8,7 +8,7 @@ import { TPost, TPosts, TPostsSlice } from './types';
 const postsInitialState: TPostsSlice = {
   posts: null,
   postsSuccess: false,
-  postsloading: false,
+  postsLoading: false,
   postsError: null,
 };
 
@@ -18,7 +18,7 @@ export const getPosts = createAsyncThunk(
   async (skip: number, { rejectWithValue }) => {
     try {
       const response = await fetch(
-        `${SERVER_BASE}/posts?limit=12&skip=${skip}&select=title,tags,reactions,body`,
+        `${SERVER_BASE}/posts?limit=12&skip=${skip}&select=title,tags,reactions,body,userId`,
         {}
       );
       const responseData: TPosts<TPost> = await checkResponse(response);
@@ -48,17 +48,17 @@ const postsSlice = createSlice({
   extraReducers: builder => {
     builder
       .addCase(getPosts.pending, state => {
-        state.postsloading = true;
+        state.postsLoading = true;
         state.postsError = null;
         state.postsSuccess = false;
       })
       .addCase(getPosts.fulfilled, (state, action) => {
         state.posts = action.payload;
-        state.postsloading = false;
+        state.postsLoading = false;
         state.postsSuccess = true;
       })
       .addCase(getPosts.rejected, (state, action) => {
-        state.postsloading = false;
+        state.postsLoading = false;
         state.postsError = action.payload;
       });
   },

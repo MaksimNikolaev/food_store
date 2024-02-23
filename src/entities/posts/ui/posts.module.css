@@ -8,9 +8,14 @@
 }
 
 .post {
-  display: flex;
-  flex-direction: column;
-  gap: 26px;
+  display: grid;
+  grid-template-columns: 1fr 40px;
+  grid-template-areas: 
+    'title title'
+    'user raiting'
+    'tags tags'
+    'text text';
+  row-gap: 7px;
   max-width: 349px;
   width: 100%;
   padding: 26px 20px;
@@ -38,31 +43,47 @@
 }
 
 .post_title {
+  grid-area: title;
   font-family: var(--font-family);
   font-weight: 600;
   font-size: 21px;
   line-height: 1.19;
   color: #252525;
+  margin-bottom: 5px;
 }
 
-.post_group {
-  display: flex;
-  justify-content: space-between;  
+.post_title_full {
+  font-size: 37px;
+  margin-bottom: 32px;
 }
 
 .post_hash {
+  grid-area: tags;
   font-weight: 400;
   font-size: 12px;
   color: #8d8d8d;
   line-height: 1;
+  margin-bottom: 17px;
+}
+
+.post_hash_full {
+  justify-self: end;
+  margin-bottom: 0;
 }
 
 .post_text {
+  grid-area: text;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.45;
   text-align: justify;
   color: #081420;
+  max-height: 78px;
+}
+
+.post_text_full {
+  margin: 60px 0 90px;
+  max-height: none;
 }
 
 .no_posts {
@@ -70,6 +91,37 @@
   margin: 0 auto;
   font-size: 18px;
   color: #636363;
+}
+
+.avatar {
+  width: 43.7px;
+  height: 43.7px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user_group {
+  grid-area: user;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.written {
+  font-weight: 400;
+  font-size: 15px;
+  color: #8d8d8d;
+  line-height: 1;
+}
+
+.user_name {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.53;
+}
+
+.raiting {
+  grid-area: raiting;
 }
 
 @media (max-width: 1440px) {

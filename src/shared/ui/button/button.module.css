@@ -11,6 +11,7 @@
   cursor: pointer;
   letter-spacing: 0.01px;
   transition: opacity ease-in-out .3s;
+  width: max-content;
 }
 
 .btn:hover {
