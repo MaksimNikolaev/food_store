@@ -27,6 +27,17 @@
   cursor: pointer;
 }
 
+.post_skelet {
+  min-height: 279px;
+  max-width: 349px;
+  width: 100%;
+  padding: 26px 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  background-color: var(--white-color);
+  box-shadow: 0 4px 47px 0 rgba(197, 197, 197, 0.25);
+}
+
 .post::after {
   content: '';
   position: absolute;
