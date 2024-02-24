@@ -13,8 +13,8 @@ export const Posts = () => {
       {postsLoading ? (
         // Если данные загружаются, показать скелеты карточек с лоадером
         Array.from({ length: 12 }).map((_, index) => (
-          <div className={styles.post_skelet}>
-            <Loader key={index} />
+          <div key={index} className={styles.post_skelet}>
+            <Loader />
           </div>
         ))
       ) : posts?.posts.length ? (
