@@ -1,26 +1,26 @@
 .reviews {
+  box-sizing: border-box;
   max-width: 1440px;
   margin: 0 auto;
-  box-sizing: border-box;
   padding: 116px 96px 95px;
 }
 
 .title {
-  font-family: var(--font-family);
+  margin-bottom: 80px;
+  padding-left: 20px;
+  color: var(--black-color);
   font-weight: 600;
   font-size: 45px;
+  font-family: var(--font-family);
   line-height: 0.56;
-  color: #323142;
   text-align: center;
-  padding-left: 20px;
-  margin-bottom: 80px;
 }
 
 .no_comment {
+  color: #636363;
+  font-size: 18px;
   font-family: var(--font-family);
   text-align: center;
-  font-size: 18px;
-  color: #636363;
 }
 
 @media (max-width: 1024px) {
@@ -37,7 +37,7 @@
 
 @media (max-width: 390px) {
   .title {
-    line-height: 1;
     margin-bottom: 50px;
+    line-height: 1;
   }
 }

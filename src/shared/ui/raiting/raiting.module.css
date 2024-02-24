@@ -1,7 +1,7 @@
 .wrapper {
   display: flex;
-  align-items: center;
   gap: 5px;
+  align-items: center;
 }
 
 .wrapper_revert {
@@ -9,9 +9,9 @@
 }
 
 .raiting {
-  font-family: var(--second-family);
+  color: #8e97a6;
   font-weight: 400;
   font-size: 19px;
+  font-family: var(--second-family);
   line-height: 1;
-  color: #8e97a6;
 }

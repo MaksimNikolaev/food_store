@@ -2,31 +2,31 @@
   display: flex;
   flex-direction: column;
   gap: 51px;
-  padding: 84px 96px 78px;
   box-sizing: border-box;
+  padding: 84px 96px 78px;
 }
 
 .title {
+  color: #252525;
   font-weight: 600;
   font-size: 40px;
   line-height: 1.39;
-  color: #252525;
 }
 
 .textarea {
-  font-family: var(--second-family);
+  box-sizing: border-box;
   width: 100%;
   min-height: 345px;
-  outline: 2px solid #6c5fbc;
-  border-radius: 18px;
-  background: #f9f9f9;
+  margin-bottom: 51px;
   padding: 23px 27px;
-  box-sizing: border-box;
   font-weight: 600;
   font-size: 18px;
+  font-family: var(--second-family);
   line-height: 1.5;
+  background: #f9f9f9;
   border: none;
-  margin-bottom: 51px;
+  border-radius: 18px;
+  outline: 2px solid #6c5fbc;
 }
 
 .textarea:focus {
@@ -34,9 +34,9 @@
 }
 
 .btn {
-  max-width: 493px;
   width: 100%;
-  font-size: 21px;
+  max-width: 493px;
   font-weight: 500;
+  font-size: 21px;
   letter-spacing: 0.03em;
 }

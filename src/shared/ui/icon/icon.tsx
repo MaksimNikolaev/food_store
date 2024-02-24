@@ -18,7 +18,7 @@ import { TIcon } from './types';
  */
 export const Icon: FC<TIcon> = ({
   name,
-  color = 'var(--black-color)',
+  color,
   colorHover,
   handleClick,
   className,

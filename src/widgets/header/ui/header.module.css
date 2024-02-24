@@ -1,14 +1,14 @@
 .header {
+  box-sizing: border-box;
   max-width: 1440px;
   margin: 0 auto;
-  box-sizing: border-box;
   padding: 57px 96px 0;  
 }
 
 .header_wrapper {
   display: flex;
-  align-items: center;
   gap: 103.12px;
+  align-items: center;
   padding-bottom: 35.68px;
   border-bottom: 1px solid #cbcbcb;
 }

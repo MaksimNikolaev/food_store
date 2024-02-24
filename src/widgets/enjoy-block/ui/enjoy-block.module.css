@@ -1,11 +1,11 @@
 .container {
   display: flex;
   gap: 37px;
-  max-width: 1440px;
-  margin: 0 auto;
   box-sizing: border-box;
-  padding: 49px 58.52px 74px 96px;
+  max-width: 1440px;
   min-height: 607px;
+  margin: 0 auto;
+  padding: 49px 58.52px 74px 96px;
 }
 .enjoy_food {
   max-width: 568px;
@@ -13,40 +13,40 @@
 }
 
 .count_user {
-  font-family: var(--font-family);
+  margin-bottom: 18px;
+  color: #201f1f;
   font-weight: 600;
   font-size: 15px;
+  font-family: var(--font-family);
   letter-spacing: 0.14em;
-  color: #201f1f;
   opacity: 0.2;
-  margin-bottom: 18px;
 }
 
 .count_user::before {
-  content: '';
   display: inline-block;
   width: 74px;
   height: 17px;
   background: url('../../../shared/assets/icons/line.svg') no-repeat 0 10px;
+  content: '';
 }
 
 .title {
-  font-family: var(--font-family);
+  margin-bottom: 16px;
   font-weight: 600;
   font-size: 75px;
-  margin-bottom: 16px;
-  letter-spacing: -3px;
+  font-family: var(--font-family);
   line-height: 1.2;
+  letter-spacing: -3px;
 }
 
 .paragraph {
-  font-family: var(--third-family);
+  max-width: 499px;
+  margin-bottom: 54px;
+  color: #676767;
   font-weight: 400;
   font-size: 18px;
+  font-family: var(--third-family);
   line-height: 1.56;
-  color: #676767;
-  margin-bottom: 54px;
-  max-width: 499px;
   text-align: justify;
 }
 
@@ -66,12 +66,12 @@
 }
 
 .graph {
-  width: 283px;
-  height: 308px;
-  object-fit: contain;
   position: absolute;
   bottom: -10px;
   left: 12px;
+  width: 283px;
+  height: 308px;
+  object-fit: contain;
 }
 
 .img {
@@ -107,19 +107,19 @@
     font-size: 35px;
   }
   .paragraph {
-    line-height: 1.56;
-    font-size: 14px;
-    margin-bottom: 45px;
     max-width: 499px;
+    margin-bottom: 45px;
+    font-size: 14px;
+    line-height: 1.56;
   }
   .img {
     width: 418px;
     height: 374px;
   }
   .graph {
+    bottom: 100px;
     width: 173px;
     height: 188px;
-    bottom: 100px;
   }
   .notification {
     top: 22px;
@@ -130,8 +130,8 @@
 @media (max-width: 768px) {
   .container {
     flex-wrap: wrap;
-    justify-content: center;
     gap: 37px;
+    justify-content: center;
     padding: 49px 20px 74px;
   }
   .enjoy_food {

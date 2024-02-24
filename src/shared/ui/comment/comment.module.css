@@ -1,10 +1,10 @@
 .review_text {
-  padding: 38px 43px;
+  box-sizing: border-box;
   max-width: 400px;
   min-height: 200px;
+  padding: 38px 43px;
   background-color: var(--white-color);
   border-radius: 20px;
-  box-sizing: border-box;
   animation: fadeIn 0.5s ease-in-out;
 }
 
@@ -15,11 +15,11 @@
 }
 
 .name {
-  font-family: var(--font-family);
+  color: #030314;
   font-weight: 500;
   font-size: 20px;
+  font-family: var(--font-family);
   line-height: 1.5;
-  color: #030314;
 }
 
 .quote {
@@ -27,24 +27,24 @@
 }
 
 .paragraph {
-  font-family: var(--font-family);
-  font-style: italic;
+  margin-bottom: 7px;
+  color: #636363;
   font-weight: 400;
   font-size: 18px;
+  font-family: var(--font-family);
+  font-style: italic;
   line-height: 1.45;
   text-align: justify;
-  color: #636363;
-  margin-bottom: 7px;
 }
 
 @keyframes fadeIn {
   0% {
-    opacity: 0;
     transform: translateY(-10px);
+    opacity: 0;
   }
   100% {
-    opacity: 1;
     transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -53,8 +53,8 @@
     padding: 27px 32px;
   }
   .paragraph {
-    font-size: 16px;
     margin-bottom: 5px;
+    font-size: 16px;
   }
 }
 

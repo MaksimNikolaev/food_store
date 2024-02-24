@@ -1,13 +1,13 @@
 .btn_container {
   display: flex;
+  gap: 70px;
   align-items: center;
   justify-content: center;
-  gap: 70px;
 }
 
 .btn {
-  border: none;
   background-color: transparent;
+  border: none;
   cursor: pointer;
 }
 
@@ -16,6 +16,6 @@
 }
 
 .btn_disabled {
-  opacity: .2;
   cursor: not-allowed;
+  opacity: .2;
 }
