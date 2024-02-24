@@ -1,8 +1,8 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { SERVER_BASE } from '../../../shared/utils/constants/constants';
-import checkResponse from '../../../shared/utils/function/functions';
 import { TCommentArg, TCommentSlice } from './types';
 import { TComment } from '../../../shared/ui/comment/types';
+import { checkResponse } from '../../../shared/utils/function/functions';
 
 const commentsInitialState: TCommentSlice = {
   comments: null,

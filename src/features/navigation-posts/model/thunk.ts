@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { SERVER_BASE } from '../../../shared/utils/constants/constants';
-import checkResponse, {
+import {
+  checkResponse,
   formatTags,
 } from '../../../shared/utils/function/functions';
 import { TPost, TPosts, TPostsSlice } from './types';
