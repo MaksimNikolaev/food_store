@@ -1,4 +1,5 @@
 import { Comments } from '../../entities/comments';
+import { CommentAdd } from '../../features/comment-add';
 import { FullPost } from '../../features/full-post';
 import { menuNavigationList } from '../../shared/utils/constants/constants';
 import { Footer } from '../../widgets/footer';
@@ -12,6 +13,7 @@ export const Post = () => {
       <main className={styles.main}>
         <FullPost/>
         <Comments/>
+        <CommentAdd/>
       </main>
       <Footer />
     </>

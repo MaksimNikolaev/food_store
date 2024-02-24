@@ -9,4 +9,5 @@ export type TButtonVariant = 'primary' | 'secondary';
 
 export type TButton = {
   variant: TButtonVariant;
+  extraClass?: string;
 } & ButtonHTMLAttributes<HTMLButtonElement>;

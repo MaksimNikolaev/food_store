@@ -1,6 +1,7 @@
 .btn {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 15px;
   border-radius: 12px;  
   border: 1.5px solid var(--blue-color);;

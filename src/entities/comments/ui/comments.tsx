@@ -1,16 +1,28 @@
 import { useParams } from 'react-router-dom';
 import styles from './comments.module.css';
 import { useEffect } from 'react';
-import { useLazyGetCommentsQuery } from '../model';
+import { getComments } from '../model';
 import { Comment } from '../../../shared/ui/comment/comment';
+import { useDispatch, useSelector } from '../../../app/store';
+import { toast } from 'react-toastify';
+import { getErrorText } from '../../../shared/utils/function/functions';
 
 export const Comments = () => {
   const { id } = useParams();
-  const [getComments, { data }] = useLazyGetCommentsQuery();
+  const dispatch = useDispatch();
+  const { comments: data, commentsError } = useSelector(state => state.comments);
 
   useEffect(() => {
-    id && getComments(id);
-  }, [getComments, id]);
+    id && dispatch(getComments(+id));
+  }, [dispatch, id]);
+
+  //Обработка ошибок
+  useEffect(() => {
+    if (commentsError) {
+      const textError = getErrorText(commentsError);
+      toast.error(textError as string);
+    }
+  }, [commentsError]);
 
   if (!data) {
     return null;

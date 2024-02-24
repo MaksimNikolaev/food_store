@@ -3,7 +3,6 @@ import { TypedUseSelectorHook, useDispatch as dispatchHook, useSelector as selec
 import { recipesApi } from '../entities/recipes/model';
 import { rootReducer } from './root-reducer';
 import { reviewApi } from '../entities/reviews/model';
-import { commentsApi } from '../entities/comments/model';
 import { userApi } from '../entities/posts/model';
 import { postApi } from '../features/full-post/model';
 
@@ -14,7 +13,6 @@ export const store = configureStore({
       recipesApi.middleware,
       reviewApi.middleware,
       postApi.middleware,
-      commentsApi.middleware,
       userApi.middleware,
     ),
   devTools: true,

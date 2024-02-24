@@ -1,2 +1,8 @@
 export * from './types';
-export { commentsApi, useLazyGetCommentsQuery } from './rtkq';
+export {
+  commentsReducer,
+  getComments,
+  addComment,
+  resetCommentsState,
+  clearCommentsMessage,
+} from './thunk';
