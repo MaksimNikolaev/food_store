@@ -52,8 +52,8 @@
 
 .accordion_collapse {
   height: 0;
-  overflow: hidden;
   border-bottom: 1px solid #cbcbcb;
+  overflow: hidden;
   transition: height 0.3s;
   will-change: height;
 }
@@ -88,9 +88,9 @@
 .btn {
   width: 30.12px;
   height: 30.12px;
-  background-image: url('../../../shared/assets/icons/plus.svg');
   border: none;
   border-radius: 50%;
+  background-image: url('../../../shared/assets/icons/plus.svg');
   cursor: pointer;
   transition: all .3s ease-out; 
   will-change: auto;

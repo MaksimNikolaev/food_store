@@ -29,8 +29,8 @@
   width: 100%;
   max-width: 1189px;
   height: 201px;
-  background: var(--black-color);
   border-radius: 13px;
+  background: var(--black-color);
   opacity: 0.2;
   filter: blur(184.4px);
   content: '';

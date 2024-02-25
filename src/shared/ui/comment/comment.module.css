@@ -3,8 +3,8 @@
   max-width: 400px;
   min-height: 200px;
   padding: 38px 43px;
-  background-color: var(--white-color);
   border-radius: 20px;
+  background-color: var(--white-color);
   animation: fadeIn 0.5s ease-in-out;
 }
 

@@ -36,9 +36,9 @@
   max-width: 534px;
   height: 466px;  
   padding: 37.69px 37.69px 45.55px;
-  background-color: var(--white-color);
   border: 1.57px solid #edf2f7;
   border-radius: 25px;
+  background-color: var(--white-color);
 }
 
 .dashboard::after {
@@ -73,6 +73,8 @@
   width: 175px;
   height: 53px;
   padding: 0 15px;
+  border: none;
+  border-radius: 13px;
   color: #1a202c;
   font-weight: 600;
   font-size: 18.85px;  
@@ -82,8 +84,6 @@
   background: #fafafa url('../../../shared/assets/icons/dropdown.svg') no-repeat;
   background-position: 133px 20px;
   background-size: 20px;
-  border: none;
-  border-radius: 13px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -103,9 +103,9 @@
   justify-items: end;
   margin-bottom: 22px;
   padding: 27.57px 25.13px 24.96px;
-  column-gap: 17px;
   border: 1.57px solid #edf2f7;
   border-radius: 19px;
+  column-gap: 17px;
   row-gap: 21px;
 }
 
@@ -165,8 +165,8 @@
   top: 0;
   width: 72%;
   height: 9px;
-  background-color: var(--blue-color);
   border-radius: 79px;
+  background-color: var(--blue-color);
   content: '';
 }
 
@@ -179,8 +179,8 @@
   top: 0;
   width: 60%;
   height: 9px;
-  background-color: #fbad18;
   border-radius: 79px;
+  background-color: #fbad18;
   content: '';
 }
 

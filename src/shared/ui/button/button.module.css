@@ -4,13 +4,13 @@
   align-items: center;
   justify-content: center;
   width: max-content;
-  max-height: 59px;
+  max-height: 59px;  
+  border: 1.5px solid var(--blue-color);
+  border-radius: 12px;
   font-weight: 500;
   font-size: 16.27px;;
   font-family: var(--font-family);
-  letter-spacing: 0.01px;  
-  border: 1.5px solid var(--blue-color);
-  border-radius: 12px;
+  letter-spacing: 0.01px;
   cursor: pointer;
   transition: opacity ease-in-out .3s;
 }
