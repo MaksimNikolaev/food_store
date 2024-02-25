@@ -24,7 +24,7 @@ export const CommentAdd = () => {
     e: KeyboardEvent<HTMLTextAreaElement> | FormEvent<HTMLFormElement>
   ) => {
     e.preventDefault();
-    if (id && commentBody) {
+    if (id && commentBody.trim()) {
       const data = {
         body: commentBody,
         postId: +id,
