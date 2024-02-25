@@ -18,5 +18,5 @@ export const checkResponse = (res: Response) => {
 
 // Функция для преобразования массива тегов в строку с символами # и запятыми
 export const formatTags = (tags: string[]): string => {
-  return tags.map(tag => `#${tag}`).join(', ');
+  return tags.filter(tag => tag !== '').map(tag => `#${tag}`).join(', ');
 };
