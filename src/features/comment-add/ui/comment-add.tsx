@@ -46,7 +46,7 @@ export const CommentAdd = () => {
   //Успешное добавление комментария
   useEffect(() => {
     if (addCommentSuccess) {
-      toast.success('Комментарий успешно добавлен');
+      toast.success('Comment added successfully');
     }
   }, [addCommentSuccess]);
 

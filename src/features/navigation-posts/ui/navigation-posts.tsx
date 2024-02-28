@@ -15,6 +15,7 @@ export const NavigationPosts = () => {
   const isDisabledPrevious = skip === limit;
   const isDisabledNext =
     skip + limit >= total || skip + limit > maxPages * limit;
+  const dispatch = useDispatch();
 
   //Устанавливаем количество всех постов
   useEffect(() => {
@@ -33,7 +34,6 @@ export const NavigationPosts = () => {
     if (skip === limit) return;
     setSkip(prevSkip => Math.max(prevSkip - limit, 0));
   };
-  const dispatch = useDispatch();
 
   //Получение постов
   useEffect(() => {
@@ -49,13 +49,14 @@ export const NavigationPosts = () => {
   }, [postsError]);
 
   //Убираем кнопки навигации если данных нет
-  if (!posts?.posts.length) {
+   if (!posts?.posts.length) {
     return null;
   }
 
   return (
     <div className={styles.btn_container}>
       <button
+        aria-label='Previous posts'
         disabled={isDisabledPrevious}
         className={`${styles.btn} ${styles.btn_rotate} ${
           isDisabledPrevious ? styles.btn_disabled : ''
@@ -63,19 +64,20 @@ export const NavigationPosts = () => {
         onClick={handlePreviousPage}
       >
         <Icon
-          aria-label='Previous posts'
+          aria-hidden='true'
           name='arrow_navigation'
           width={45}
           height={60}
         />
       </button>
       <button
+        aria-label='Next posts'
         disabled={isDisabledNext}
         className={`${styles.btn} ${isDisabledNext ? styles.btn_disabled : ''}`}
         onClick={handleNextPage}
       >
         <Icon
-          aria-label='Next posts'
+          aria-hidden='true'
           name='arrow_navigation'
           width={45}
           height={60}
