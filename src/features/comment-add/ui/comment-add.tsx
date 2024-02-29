@@ -80,7 +80,7 @@ export const CommentAdd = () => {
           }
           onKeyDown={handleKeyDown}
         />
-        <Button extraClass={styles.btn} type='submit' variant='primary'>
+        <Button disabled={!commentBody.trim()} extraClass={styles.btn} type='submit' variant='primary'>
           Send
         </Button>
       </form>
