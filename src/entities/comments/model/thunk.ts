@@ -21,7 +21,7 @@ export const getComments = createAsyncThunk(
   'comments/getComments',
   async (id: number, { rejectWithValue }) => {
     try {
-      const response = await fetch(`${SERVER_BASE}/comments/post/${id}?limit=6`);
+      const response = await fetch(`${SERVER_BASE}/comments/post/${id}`);
       return await checkResponse(response);
     } catch (error) {
       return rejectWithValue(error);

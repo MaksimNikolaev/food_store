@@ -10,7 +10,7 @@ export const reviewApi = createApi({
   endpoints: build => ({
     getComments: build.query<TReviewData, void>({
       query: () => ({
-        url: `${SERVER_BASE}/comments?limit=0`,
+        url: `/comments?limit=6`,
       }),
     }),
   }),

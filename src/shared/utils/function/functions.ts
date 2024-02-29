@@ -5,8 +5,16 @@ export const getErrorText = (error: unknown) => {
   if (typeof error === 'object' && error !== null) {
     if ('message' in error) {
       return (error as Error).message;
-    } else if ('data' in error && typeof (error as any).data === 'object' && (error as any).data !== null && 'message' in (error as any).data) {
+    } else if (
+      'data' in error &&
+      typeof (error as any).data === 'object' &&
+      (error as any).data !== null &&
+      'message' in (error as any).data
+    ) {
       return (error as any).data.message;
+    }
+    if ('data' in error && typeof (error as any).data === 'string') {
+      return error.data;
     }
   }
   return SERVER_NOT_RESPONDING;
@@ -22,5 +30,8 @@ export const checkResponse = (res: Response) => {
 
 // Функция для преобразования массива тегов в строку с символами # и запятыми
 export const formatTags = (tags: string[]): string => {
-  return tags.filter(tag => tag !== '').map(tag => `#${tag}`).join(', ');
+  return tags
+    .filter(tag => tag !== '')
+    .map(tag => `#${tag}`)
+    .join(', ');
 };
