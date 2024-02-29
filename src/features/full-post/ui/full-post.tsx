@@ -22,11 +22,14 @@ export const FullPost = () => {
   useEffect(() => {
     if (postIsError && postError) {
       const textError = getErrorText(postError);
-      if ((textError).includes('Invalid post id')) {
-        navigate('/404');
+      if (
+        textError.includes('Invalid post id') ||
+        textError.includes('Post with id')
+      ) {
+        navigate('/blog');
       } else {
         toast.error(textError);
-      }      
+      }
     }
   }, [postIsError, postError]);
 

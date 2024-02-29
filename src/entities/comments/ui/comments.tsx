@@ -20,10 +20,11 @@ export const Comments = () => {
   useEffect(() => {
     if (commentsError) {
       const textError = getErrorText(commentsError);
-      toast.error(textError);
+      toast.error(textError, {toastId: textError});
       dispatch(resetCommentsState());
     }
   }, [commentsError]);
+
 
   if (!data) {
     return null;
