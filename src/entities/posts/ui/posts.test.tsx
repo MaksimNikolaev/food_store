@@ -9,6 +9,8 @@ import * as redux from '../../../app/store';
 import { Posts } from './posts';
 import { Provider } from 'react-redux';
 
+/* P.S.Паттерн Прокси  В данном контексте, мок функции useNavigate 
+выступает в качестве прокси для реальной функции useNavigate  */
 const mockUsedNavigate = jest.fn();
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),

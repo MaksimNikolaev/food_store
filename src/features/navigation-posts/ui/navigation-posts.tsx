@@ -6,6 +6,7 @@ import { Icon } from '../../../shared/ui/icon/icon';
 import { getErrorText } from '../../../shared/utils/function/functions';
 import { toast } from 'react-toastify';
 
+//P.S.Паттерн Итератор В этом компоненте итератор используется для навигации по страницам постов.
 export const NavigationPosts = () => {
   const { posts, postsError } = useSelector(state => state.posts);
   const [total, setTotal] = useState(0);
@@ -24,12 +25,12 @@ export const NavigationPosts = () => {
     }
   }, [posts]);
 
-  //Обработчик стрелки навегиции "Следующий"
+  //Обработчик стрелки навигиции "Следующий"
   const handleNextPage = () => {
     setSkip(prevSkip => prevSkip + limit);
   };
 
-  //Обработчик стрелки навегиции "Предыдущий"
+  //Обработчик стрелки навигиции "Предыдущий"
   const handlePreviousPage = () => {
     if (skip === limit) return;
     setSkip(prevSkip => Math.max(prevSkip - limit, 0));
@@ -49,7 +50,7 @@ export const NavigationPosts = () => {
   }, [postsError]);
 
   //Убираем кнопки навигации если данных нет
-   if (!posts?.posts.length) {
+  if (!posts?.posts.length) {
     return null;
   }
 
