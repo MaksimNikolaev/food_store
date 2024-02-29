@@ -44,28 +44,34 @@ const render = (component: ReactNode) =>
 
 describe('Posts component', () => {
   it('load posts', async () => {
+    //Возвращаем стейт с мок данными
     jest.spyOn(redux, 'useSelector').mockReturnValue({
       posts: { posts: data.posts, postsLoading: false },
     });
     render(<Posts />);
+    //Проверяем что элемент есть на странице
     expect(screen.getByText('Title 1')).toBeInTheDocument();
   });
 
   it('Checking for an empty array', async () => {
+    //Возвращаем стейт с пустым массивом
     jest.spyOn(redux, 'useSelector').mockReturnValue({
       posts: { posts: [], postsLoading: false },
     });
     render(<Posts />);
+    //Проверяем что вместо постов отображаетя "Posts are not available"
     expect(screen.getByText('Posts are not available')).toBeInTheDocument();
   });
 
   it('navigates to post details when a post is clicked', async () => {
+    //Возвращаем стейт с мок данными
     jest.spyOn(redux, 'useSelector').mockReturnValue({
       posts: { posts: data.posts, postsLoading: false },
     });
     render(<Posts />);
+    //Кликаем на пост
     fireEvent.click(screen.getByText('Title 1'));
-
+    //Проверяем что отрабатывает навигация с нужным маршрутом
     await waitFor(() => {
       expect(mockUsedNavigate).toHaveBeenCalledWith('/blog/post/1');
     });
