@@ -11,7 +11,7 @@ export const postApi = createApi({
   endpoints: build => ({
     getPost: build.query<TPost<string>, string>({
       query: (id: string) => ({
-        url: `${SERVER_BASE}/posts/${id}`,
+        url: `/posts/${id}`,
       }),
       transformResponse: (res: TPost<string []>) => {
         return {

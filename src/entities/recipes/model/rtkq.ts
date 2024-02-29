@@ -11,7 +11,7 @@ export const recipesApi = createApi({
   endpoints: (build) => ({
     getRecipes: build.query<TRecipe[], void>({
       query: () => ({
-        url: `${SERVER_BASE}/recipes/meal-type/lunch?limit=0`,
+        url: `/recipes/meal-type/lunch?limit=0`,
       }),
       transformResponse: (res: TRecipeData) => {
         return getRecipesDTO(res);

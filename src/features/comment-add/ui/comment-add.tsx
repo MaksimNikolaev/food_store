@@ -54,7 +54,7 @@ export const CommentAdd = () => {
   useEffect(() => {
     if (addCommentError) {
       const textError = getErrorText(addCommentError);
-      toast.error(textError as string);
+      toast.error(textError);
     }
   }, [addCommentError]);
 

@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import styles from './comments.module.css';
 import { useEffect } from 'react';
-import { getComments } from '../model';
+import { clearCommentsMessage, getComments, resetCommentsState } from '../model';
 import { Comment } from '../../../shared/ui/comment/comment';
 import { useDispatch, useSelector } from '../../../app/store';
 import { toast } from 'react-toastify';
@@ -20,7 +20,8 @@ export const Comments = () => {
   useEffect(() => {
     if (commentsError) {
       const textError = getErrorText(commentsError);
-      toast.error(textError as string);
+      toast.error(textError);
+      dispatch(resetCommentsState());
     }
   }, [commentsError]);
 

@@ -44,7 +44,7 @@ export const NavigationPosts = () => {
   useEffect(() => {
     if (postsError) {
       const textError = getErrorText(postsError);
-      toast.error(textError as string);
+      toast.error(textError);
     }
   }, [postsError]);
 

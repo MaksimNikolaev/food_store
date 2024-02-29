@@ -2,8 +2,12 @@ import { SERVER_NOT_RESPONDING } from '../constants/constants';
 
 //Получение текста ошибки
 export const getErrorText = (error: unknown) => {
-  if (typeof error === 'object' && error && 'data' in error && error.data) {
-    return error.data;
+  if (typeof error === 'object' && error !== null) {
+    if ('message' in error) {
+      return (error as Error).message;
+    } else if ('data' in error && typeof (error as any).data === 'object' && (error as any).data !== null && 'message' in (error as any).data) {
+      return (error as any).data.message;
+    }
   }
   return SERVER_NOT_RESPONDING;
 };

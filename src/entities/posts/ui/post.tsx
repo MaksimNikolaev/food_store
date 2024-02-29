@@ -79,7 +79,7 @@ export const Post: FC<{ post: TPost; isFullPost?: boolean }> = ({
   useEffect(() => {
     if (userIsError && userError) {
       const textError = getErrorText(userError);
-      toast.error(textError as string);
+      toast.error(textError);
     }
   }, [userIsError, userError]);
 

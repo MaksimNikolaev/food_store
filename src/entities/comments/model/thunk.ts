@@ -21,7 +21,7 @@ export const getComments = createAsyncThunk(
   'comments/getComments',
   async (id: number, { rejectWithValue }) => {
     try {
-      const response = await fetch(`${SERVER_BASE}/comments/post/${id}`);
+      const response = await fetch(`${SERVER_BASE}/comments/post/${id}?limit=6`);
       return await checkResponse(response);
     } catch (error) {
       return rejectWithValue(error);
@@ -56,6 +56,7 @@ const commentsSlice = createSlice({
     clearCommentsMessage: state => {
       state.addCommentSuccess = false;
       state.addCommentError = null;
+      state.commentsError = null;
     },
   },
   extraReducers: builder => {

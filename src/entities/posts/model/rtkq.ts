@@ -10,7 +10,7 @@ export const userApi = createApi({
   endpoints: build => ({   
     getUser: build.query<TUser, number>({
       query: (id: number) => ({
-        url: `${SERVER_BASE}/users/${id}`,
+        url: `/users/${id}`,
       }),
     }),
   }),
