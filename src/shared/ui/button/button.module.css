@@ -1,15 +1,17 @@
 .btn {
   display: flex;
-  align-items: center;
   gap: 15px;
-  border-radius: 12px;  
-  border: 1.5px solid var(--blue-color);;
-  font-family: 'Poppins';
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  max-height: 59px;  
+  border: 1.5px solid var(--blue-color);
+  border-radius: 12px;
   font-weight: 500;
-  font-size: 16.27px;
-  max-height: 59px;
-  cursor: pointer;
+  font-size: 16.27px;;
+  font-family: var(--font-family);
   letter-spacing: 0.01px;
+  cursor: pointer;
   transition: opacity ease-in-out .3s;
 }
 
@@ -18,15 +20,15 @@
 }
 
 .primary {
-  background-color: var(--blue-color);
-  color: var(--white-color);
   padding: 18px 31px 17px 30px;
+  color: var(--white-color);
+  background-color: var(--blue-color);
 }
 
 .secondary {
-  background-color: var(--white-color);
-  color: var(--blue-color);
   padding: 18px 28px 17px 27px;
+  color: var(--blue-color);
+  background-color: var(--white-color);
 }
 
 @media (max-width: 390px) {

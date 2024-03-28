@@ -1,19 +1,19 @@
 .loading {
-  width: 20px;
-  height: 20px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  width: 20px;
+  height: 20px;
   overflow: hidden;
 }
 
 .loading div {
   position: absolute;
-  width: 2px;
-  height: 6px;
   top: 10px;
   left: 9px;
+  width: 2px;
+  height: 6px;
   transform-origin: 1px 0;
   animation: loading-animation linear 1s infinite;
 }

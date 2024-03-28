@@ -1,8 +1,8 @@
 .link {
-  font-family: var(--third-family);
+  color: #606060;
   font-weight: 500;
   font-size: 17.83px;
-  color: #606060;
+  font-family: var(--third-family);
 }
 
 .link:hover {

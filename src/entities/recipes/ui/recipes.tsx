@@ -14,7 +14,7 @@ export const Recipes = () => {
   useEffect(() => {
     if (isError && error) {
       const textError = getErrorText(error);
-      toast.error(textError as string);
+      toast.error(textError);
     }
   }, [isError, error]);
 

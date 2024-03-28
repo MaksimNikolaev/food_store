@@ -1,5 +1,6 @@
 import styles from './mobile-block.module.css';
-import mobileImg from '../../../shared/assets/images/Mobile.webp';
+import mobileWebp from '../../../shared/assets/images/Mobile.webp';
+import mobilePng from '../../../shared/assets/images/Mobile.png';
 import { SpanColor } from '../../../shared/ui/span-color/span-color';
 import { Button } from '../../../shared/ui/button/button';
 import { Icon } from '../../../shared/ui/icon/icon';
@@ -8,13 +9,16 @@ export const MobileBlock = () => {
   return (
     <section className={styles.mobile_block}>
       <div className={styles.wrapper}>
-        <img
-          className={styles.img}
-          loading='lazy'
-          decoding='async'
-          src={mobileImg}
-          alt='mobile'
-        />
+        <picture>
+          <source type='image/webp' srcSet={mobileWebp} />
+          <img
+            className={styles.img}
+            loading='lazy'
+            decoding='async'
+            src={mobilePng}
+            alt='mobile'
+          />
+        </picture>
         <div className={styles.group}>
           <h2 className={styles.title}>
             Premium <SpanColor>Quality</SpanColor>
@@ -38,7 +42,7 @@ export const MobileBlock = () => {
                 name='arrow'
                 width={27.09}
                 height={27.09}
-                aria-hidden="true"
+                aria-hidden='true'
               />
             </Button>
           </div>

@@ -17,7 +17,7 @@ export const Reviews = () => {
   useEffect(() => {
     if (isError && error) {
       const textError = getErrorText(error);
-      toast.error(textError as string);
+      toast.error(textError);
     }
   }, [isError, error]);
 
@@ -30,7 +30,7 @@ export const Reviews = () => {
         <Loader />
       ) : data?.comments.length ? (
         <Slider {...settingsSlider}>
-          {data?.comments.slice(0, 6).map(comment => (
+          {data?.comments.map(comment => (
             <Comment key={comment.id} comment={comment} />
           ))}
         </Slider>

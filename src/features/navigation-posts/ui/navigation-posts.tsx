@@ -6,6 +6,7 @@ import { Icon } from '../../../shared/ui/icon/icon';
 import { getErrorText } from '../../../shared/utils/function/functions';
 import { toast } from 'react-toastify';
 
+//P.S.Паттерн Итератор В этом компоненте итератор используется для навигации по страницам постов.
 export const NavigationPosts = () => {
   const { posts, postsError } = useSelector(state => state.posts);
   const [total, setTotal] = useState(0);
@@ -15,6 +16,7 @@ export const NavigationPosts = () => {
   const isDisabledPrevious = skip === limit;
   const isDisabledNext =
     skip + limit >= total || skip + limit > maxPages * limit;
+  const dispatch = useDispatch();
 
   //Устанавливаем количество всех постов
   useEffect(() => {
@@ -23,17 +25,16 @@ export const NavigationPosts = () => {
     }
   }, [posts]);
 
-  //Обработчик стрелки навегиции "Следующий"
+  //Обработчик стрелки навигиции "Следующий"
   const handleNextPage = () => {
     setSkip(prevSkip => prevSkip + limit);
   };
 
-  //Обработчик стрелки навегиции "Предыдущий"
+  //Обработчик стрелки навигиции "Предыдущий"
   const handlePreviousPage = () => {
     if (skip === limit) return;
     setSkip(prevSkip => Math.max(prevSkip - limit, 0));
   };
-  const dispatch = useDispatch();
 
   //Получение постов
   useEffect(() => {
@@ -44,7 +45,7 @@ export const NavigationPosts = () => {
   useEffect(() => {
     if (postsError) {
       const textError = getErrorText(postsError);
-      toast.error(textError as string);
+      toast.error(textError);
     }
   }, [postsError]);
 
@@ -56,6 +57,7 @@ export const NavigationPosts = () => {
   return (
     <div className={styles.btn_container}>
       <button
+        aria-label='Previous posts'
         disabled={isDisabledPrevious}
         className={`${styles.btn} ${styles.btn_rotate} ${
           isDisabledPrevious ? styles.btn_disabled : ''
@@ -63,19 +65,20 @@ export const NavigationPosts = () => {
         onClick={handlePreviousPage}
       >
         <Icon
-          aria-label='Previous posts'
+          aria-hidden='true'
           name='arrow_navigation'
           width={45}
           height={60}
         />
       </button>
       <button
+        aria-label='Next posts'
         disabled={isDisabledNext}
         className={`${styles.btn} ${isDisabledNext ? styles.btn_disabled : ''}`}
         onClick={handleNextPage}
       >
         <Icon
-          aria-label='Next posts'
+          aria-hidden='true'
           name='arrow_navigation'
           width={45}
           height={60}

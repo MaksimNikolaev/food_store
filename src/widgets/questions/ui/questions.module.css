@@ -1,27 +1,27 @@
 .questions {
+  box-sizing: border-box;
   max-width: 1440px;
   margin: 0 auto;
-  box-sizing: border-box;
   padding: 175px 144px 190px;
 }
 
 .title {
-  font-family: var(--font-family);
-  font-weight: 600;
-  font-size: 45px;
-  line-height: 1.2;
-  text-align: center;
-  color: #323142;
+  position: relative;
   max-width: 408px;
   margin: 0 auto 114px;
-  position: relative;
+  color: var(--black-color);
+  font-weight: 600;
+  font-size: 45px;
+  font-family: var(--font-family);
+  line-height: 1.2;
+  text-align: center;
 }
 
 .title::after {
-  content: url('../../../shared/assets/icons/Illustration.svg');
   position: absolute;
   top: -45px;
   right: -40px;
+  content: url('../../../shared/assets/icons/Illustration.svg');
 }
 
 .list_item {
@@ -35,46 +35,46 @@
 }
 
 .caption {
-  font-family: var(--font-family);
+  color: var(--black-color);
   font-weight: 600;
   font-size: 23.42px;
+  font-family: var(--font-family);
   line-height: 2.4;
-  color: #323142;
 }
 
 .group {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   max-width: 1125px;
   margin: 0 auto 20px;
 }
 
 .accordion_collapse {
   height: 0;
-  overflow: hidden;
   border-bottom: 1px solid #cbcbcb;
-  will-change: height;
+  overflow: hidden;
   transition: height 0.3s;
+  will-change: height;
 }
 
 .text {
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.6;
-  letter-spacing: 0.01em;
-  color: #686868;
   max-width: 1140px;
   margin: 0 auto;
+  color: #686868;
+  font-weight: 400;
+  font-size: 20px;
+  font-family: var(--font-family);
+  line-height: 1.6;
+  letter-spacing: 0.01em;
   white-space: pre-wrap;  
 }
 
 .text::after {
-  content: '';
   display: block;
   width: 100%;
   padding-bottom: 40px;
+  content: '';
 }
 
 .text_visible::after {
@@ -86,18 +86,19 @@
 }
 
 .btn {
-  background-image: url('../../../shared/assets/icons/plus.svg');
-  transition: all .3s ease-out;
   width: 30.12px;
   height: 30.12px;
   border: none;
   border-radius: 50%;
+  background-image: url('../../../shared/assets/icons/plus.svg');
+  cursor: pointer;
+  transition: all .3s ease-out; 
   will-change: auto;
 }
 
 .btn_active {
-  transform: rotate(180deg);
   background-image: url('../../../shared/assets/icons/minus.svg');
+  transform: rotate(180deg);
 }
 
 @media (max-width: 1280px) {
@@ -121,10 +122,10 @@
     font-size: 40px;    
   }
   .title::after {
-    content: url('../../../shared/assets/icons/Illustration.svg');
     position: absolute;
     top: -35px;
     right: -20px;
+    content: url('../../../shared/assets/icons/Illustration.svg');
   }
 }
 
@@ -138,10 +139,10 @@
   .text {
     font-size: 12px;   
   }
-  .btn {    
+  .btn {
+    flex-shrink: 0;    
     width: 25px;
     height: 25px;
-    background-size: 25px;
-    flex-shrink: 0;  
+    background-size: 25px;  
   }
 }
