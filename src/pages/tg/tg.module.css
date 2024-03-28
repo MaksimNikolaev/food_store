@@ -1,0 +1,7 @@
+body {
+  background-color: var(--tg-theme-bg-color);
+}
+
+.balance {
+  color: var(--tg-theme-text-color);
+}

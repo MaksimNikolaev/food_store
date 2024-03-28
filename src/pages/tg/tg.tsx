@@ -1,7 +1,9 @@
-import React from 'react'
+import style from './tg.module.css';
 
 export const Tg = () => {
   return (
-    <div>tg</div>
+    <div className={style.container}>
+      <h2 className={style.balance}>Ваш баланс: </h2>
+    </div>
   )
 }
