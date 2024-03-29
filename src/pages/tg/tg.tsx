@@ -9,6 +9,13 @@ export const Tg = () => {
     tg.ready();
   }, []);
 
+  const handleAuthorization = (e: any) => {
+    e.preventDefault();
+    if (tg) {
+      tg.openURL('https://t.me/BearsWb_bot?start=e356458e-11eb-4f79-baf7-c3da7ace3ae0');
+    }
+  };
+
   useEffect(() => {
     document.body.style.backgroundColor = 'var(--tg-theme-bg-color)';
     return () => {
@@ -21,7 +28,7 @@ export const Tg = () => {
       {token ? (
         <h2 className={style.balance}>Ваш баланс: 12 Р</h2>
       ) : (
-        <a href='https://t.me/BearsWb_bot?start=e356458e-11eb-4f79-baf7-c3da7ace3ae0' className={style.button}>Пройти авторизацию</a>
+        <button onClick={handleAuthorization} className={style.button}>Пройти авторизацию</button>
       )}
     </div>
   );
