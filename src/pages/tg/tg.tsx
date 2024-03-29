@@ -21,7 +21,7 @@ export const Tg = () => {
       {token ? (
         <h2 className={style.balance}>Ваш баланс: 12 Р</h2>
       ) : (
-        <button>Пройти авторизацию</button>
+        <button className={style.button}>Пройти авторизацию</button>
       )}
     </div>
   );
