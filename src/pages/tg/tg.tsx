@@ -21,7 +21,7 @@ export const Tg = () => {
       {token ? (
         <h2 className={style.balance}>Ваш баланс: 12 Р</h2>
       ) : (
-        <a href='https://t.me/wildberries_notification_bot?start=e356458e-11eb-4f79-baf7-c3da7ace3ae0' className={style.button}>Пройти авторизацию</a>
+        <a href='https://t.me/BearsWb_bot?start=e356458e-11eb-4f79-baf7-c3da7ace3ae0' className={style.button}>Пройти авторизацию</a>
       )}
     </div>
   );
