@@ -1,9 +1,28 @@
+import { useEffect } from 'react';
 import style from './tg.module.css';
 
 export const Tg = () => {
+  const tg = window.Telegram.WebApp;
+  const token = localStorage.getItem('accessToken');
+
+  useEffect(() => {
+    tg.ready();
+  }, []);
+
+  useEffect(() => {
+    document.body.style.backgroundColor = 'var(--tg-theme-bg-color)';
+    return () => {
+      document.body.style.backgroundColor = '';
+    };
+  }, []);
+
   return (
     <div className={style.container}>
-      <h2 className={style.balance}>Ваш баланс: </h2>
+      {token ? (
+        <h2 className={style.balance}>Ваш баланс: 12 Р</h2>
+      ) : (
+        <button>Пройти авторизацию</button>
+      )}
     </div>
-  )
-}
+  );
+};
