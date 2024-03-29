@@ -9,11 +9,8 @@ export const Tg = () => {
     tg.ready();
   }, []);
 
-  const handleAuthorization = (e: any) => {
-    e.preventDefault();
-    if (tg) {
-      tg.openURL('https://t.me/BearsWb_bot?start=e356458e-11eb-4f79-baf7-c3da7ace3ae0');
-    }
+  const handleAuthorization = () => {    
+    tg.openTelegramLink('https://t.me/BearsWb_bot?start=e356458e-11eb-4f79-baf7-c3da7ace3ae0');
   };
 
   useEffect(() => {
