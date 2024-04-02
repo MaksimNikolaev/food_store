@@ -6,7 +6,8 @@ import { Footer } from '../../widgets/footer';
 
 export const Tg = () => {
   const tg = window.Telegram.WebApp;
-  const token = localStorage.getItem('accessToken');
+  //const token = localStorage.getItem('accessToken');
+  const token = true;
   const isTelegramWebApp = window.navigator.userAgent.includes('TelegramBot');
 
   useEffect(() => {
