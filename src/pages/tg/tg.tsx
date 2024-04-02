@@ -4,7 +4,7 @@ import { Footer } from '../../widgets/footer';
 
 export const Tg = () => {
   const tg = window.Telegram.WebApp;
-  const isTelegramWebApp = navigator?.userAgent?.includes('TelegramBot');
+  //const isTelegramWebApp = navigator?.userAgent?.includes('TelegramBot');
 
   useEffect(() => {
     tg.ready();
@@ -32,7 +32,7 @@ export const Tg = () => {
             Пройти авторизацию
           </button> */}
       </div>
-      {!isTelegramWebApp && <Footer />}
+      <Footer />
     </>
   );
 };
