@@ -27,7 +27,7 @@ export const Tg = () => {
     <>      
       <div className={style.container}>
         <h2 className={style.balance}>Ваш баланс: 12 Р</h2>
-        <div>{window.Telegram.WebApp.initDataUnsafe.user}</div>
+        <div>{navigator?.userAgent}</div>
         {/* <button onClick={handleAuthorization} className={style.button}>
             Пройти авторизацию
           </button> */}
