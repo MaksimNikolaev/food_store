@@ -1,8 +1,10 @@
 import { useEffect } from 'react';
 import style from './tg.module.css';
+import { Footer } from '../../widgets/footer';
 
 export const Tg = () => {
   const tg = window.Telegram.WebApp;
+  const isTelegramWebApp = navigator?.userAgent?.includes('TelegramBot');
 
   useEffect(() => {
     tg.ready();
@@ -22,12 +24,15 @@ export const Tg = () => {
   }, []);
 
   return (
-    <>
+    <>      
       <div className={style.container}>
-        <button onClick={handleAuthorization} className={style.button}>
-          Пройти авторизацию
-        </button>
+        <h2 className={style.balance}>Ваш баланс: 12 Р</h2>
+        <div>{navigator?.userAgent}</div>
+        {/* <button onClick={handleAuthorization} className={style.button}>
+            Пройти авторизацию
+          </button> */}
       </div>
+      {/* <Footer /> */}
     </>
   );
 };

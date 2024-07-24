@@ -2,13 +2,6 @@ body {
   background-color: var(--tg-theme-bg-color);
 }
 
-.container {
-  display: flex;  
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
 .balance {
   color: var(--tg-theme-text-color);
 }
