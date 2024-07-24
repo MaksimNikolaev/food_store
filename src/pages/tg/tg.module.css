@@ -21,3 +21,7 @@ body {
   outline: none;
   cursor: pointer;
 }
+
+.test {
+  padding: 10px;
+}
